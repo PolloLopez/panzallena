@@ -1,0 +1,62 @@
+/* general */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* body, contiene el header, main y footer */
+
+body {
+    background-color: #fafafa;
+}
+
+
+/* header */
+header {
+    background-color: rgb(220, 194, 134);
+    height: auto;
+}
+
+.imgLogo {
+    height: 5em;
+    margin: auto;
+}
+
+.encabezado {
+    margin-left: 0.5em;    
+    margin-top: none;
+}
+
+
+nav ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 5px 25px;
+    background-color: rgb(215, 179, 96);
+    color: #332c2c;
+    border: solid 2px #f7f6f7;
+    padding: 1em;
+    border-radius: 1rem;
+    font-size: 2 rem;
+    cursor: pointer;
+}
+
+/* main */
+
+main {
+    background-color: seagreen;
+}
+
+footer {
+    background-color: red;
+}
+
+logoRedes {
+    width: 8px;
+}
+
+.none {
+    display: none;
+}
