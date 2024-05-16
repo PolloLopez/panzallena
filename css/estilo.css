@@ -5,17 +5,35 @@
     padding: 0;
 }
 
+/* fuentes */
+/* iniciales */
+@import url('https://fonts.googleapis.com/css2?family=Rakkas&display=swap');
+
+/* interior logo */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rakkas&display=swap');
+
+/* variables */
+:root {
+    --color-verde-oscuro: #5c764b;
+    --color-verde-claro: #66825a;
+    --color-blanco-claro: #efefe9;
+    --color-blanco-gris: #ebeae4;
+    --color-naranja-medialuna: #dd5400;
+    --color-texto-negro: #000000;
+    --color-texto-blanco: #ffffff;
+}
 
 /* body, contiene el header, main y footer */
 
 body {
-    background-color: #fafafa;
+    background-color: var(--color-verde-oscuro);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
 }
-
 
 /* header */
 header {
-    background-color: rgb(220, 194, 134);
+    background-color: var(--color-blanco-gris);
     height: auto;
 }
 
@@ -25,36 +43,84 @@ header {
 }
 
 .encabezado {
-    margin-left: 0.5em;    
+    margin-left: 0.5em;
     margin-top: none;
 }
 
-
-nav ul li {
+li {
+    cursor: pointer;
     list-style: none;
     display: inline-block;
-    margin: 5px 25px;
-    background-color: rgb(215, 179, 96);
-    color: #332c2c;
-    border: solid 2px #f7f6f7;
-    padding: 1em;
-    border-radius: 1rem;
-    font-size: 2 rem;
-    cursor: pointer;
+    margin: 0.2em 0.2em;
+    background-color: var(--color-verde-oscuro);
+    border-radius: 0.21rem;
+    border: solid 2px var(--color-naranja-medialuna);
+    color: var(--color-blanco-gris);
+    padding: 0.25em;
+    font-size: 2 em;
+    text-decoration: none;
 }
 
 /* main */
 
 main {
-    background-color: seagreen;
+    margin: .5em;
+    color: var(--color-texto-negro);
+}
+
+.main,
+h3 {
+    font-weight: 100;
+    font-size: 2em;
+}
+
+.sobreNosotros p {
+    line-height: 1.5em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+/* FOOTER */
+.logoWhatsapp {
+    width: 3.5em;
+    position: fixed;
+    right: .5em;
+    bottom: 1em;
+
+    &:hover {
+        width: 4em;
+    }
 }
 
 footer {
-    background-color: red;
+    padding: 3rem;
+    text-align: center;
+    margin-top: .2em;
+    margin-bottom: .5em;
+    max-height: 10em;
+    text-transform: uppercase;
 }
 
-logoRedes {
-    width: 8px;
+footer p {
+    color: var(--color-texto-negro);
+    font-size: .8rem;
+}
+
+.firma {
+    margin-top: .5em;
+}
+
+.logoRedes {
+    margin-top: none;
+    text-align:justify;
+    cursor: pointer;
+    height: 6em;
+
+    &:hover {
+        height: 6.5em;
+        border-radius: 30em;
+        border: 3px solid var(--color-verde-claro);
+    }
 }
 
 .none {
