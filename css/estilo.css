@@ -1,16 +1,16 @@
-/* general */
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
 /* fuentes */
 /* iniciales */
 @import url('https://fonts.googleapis.com/css2?family=Rakkas&display=swap');
 
 /* interior logo */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rakkas&display=swap');
+
+/* general */
+
+* {
+    margin: 0;
+    padding: 0;
+}
 
 /* variables */
 :root {
@@ -52,22 +52,34 @@ header {
 li {
     cursor: pointer;
     list-style: none;
-    display: inline-block;
+    display: block;
     margin: 0.2em 0.2em;
     background-color: var(--color-blanco-claro);
     border-radius: 0.21rem;
-    border: solid 2px var(--color-naranja-medialuna);
-    color: red;
+    border: solid 2px var(--color-verde-oscuro);
     padding: 0.25em;
-    font-size: 2 em;
+    font-size: .9em;
     text-decoration: none;
+    text-align: center;
 
     &:hover{
         background-color: var(--color-verde-claro);
-        border: 1px solid var(--color-texto-negro);
-        color: var(--color-blanco-claro);
+        border: 2px solid var(--color-texto-negro);
+    }
+
+    a {
+        color: var(--color-verde-oscuro);
+        text-decoration: none;
+    
+        &:hover{
+            color: var(--color-texto-blanco);
+        }
     }
 }
+
+
+
+
 
 /* main */
 
@@ -75,6 +87,47 @@ main {
     margin: .5em;
     color: var(--color-texto-negro);
 }
+
+/* TARJETAS INDEX nuestros productos*/
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    gap: 1rem;
+}
+
+.tarj-index{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em;
+    border-radius: .5em;
+    margin: 1em;
+    background-color: var(--color-verde-claro);
+    max-width: 28rem;
+}
+
+.tarj-img{
+    width: 100%;
+    border-radius: .5em;
+}
+
+/* .btn-tarj-index */
+.titulo-tarj {
+    margin: .5em;
+    align-items: center;
+    font-weight: 400;
+    color: var(--color-texto-negro);
+}
+
+
+/* <div class="Productos">
+            <h2>NUESTROS PRODUCTOS</h2>
+            <div class="tarj-index">
+                <img class="tarj-img" src="./img/pastas1.png" alt="pastas">
+                <h3 class="titulo-tarj">Pastas</h3>
+                <button class="bt-tarj-index"> VER </button>
+            </div> */
 
 .main,
 h3 {
@@ -96,7 +149,9 @@ h3 {
     bottom: 1em;
 
     &:hover {
-        width: 4em;
+        width: 4.5em;
+        border-radius: 3em;
+        border: 3px solid var(--color-verde-claro);
     }
 }
 
@@ -122,12 +177,13 @@ footer p {
     margin-top: none;
     margin-left: 2em;
     margin-right: 2em;
-    text-align:justify;
+    text-align: justify;
     cursor: pointer;
     width: 4em;
 
     &:hover {
         width: 4.5em;
+        border-radius: 3em;
         border: 3px solid var(--color-verde-claro);
     }
 }
@@ -136,7 +192,10 @@ footer p {
     display: none;
 }
 
-.h1,h2,h3,h4 {
+h1,
+h2,
+h3,
+h4 {
     color: var(--color-verde-oscuro);
 }
 
