@@ -110,12 +110,11 @@ main {
 .productos {
     display: grid;
     /*    grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
     /* Ajusta el ancho mínimo y máximo de las columnas */
     gap: .5em;
     background-color: var(--color-verde-sombra);
     border-radius: .5em;
-    margin-bottom: 1em;
 }
 
 .tarj-container {
@@ -124,7 +123,7 @@ main {
     /* Centra horizontalmente */
     align-items: center;
     /* Centra verticalmente si se desea */
-    padding: 1em;
+    padding: 1rem;
     width: 100%;
 }
 
@@ -163,7 +162,7 @@ main {
 .sobreNosotros p {
     line-height: 1.5em;
     margin: 1rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', Verdana, sans-serif;
 }
 .titulos {
     text-transform: uppercase;
