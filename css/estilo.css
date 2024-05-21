@@ -10,6 +10,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box; /* Asegura que padding y border se incluyan en el ancho y alto total */
 }
 
 /* variables */
@@ -49,37 +50,40 @@ header {
     margin-top: none;
 }
 
-li {
+.menuNav {
+    display: flex;
+    justify-content: flex-end;
+    gap: .5em; /* Ajustar el espaciado entre los elementos */
+}
+
+.menuNav li {
     cursor: pointer;
     list-style: none;
-    display: block;
-    margin: 0.2em 0.2em;
     background-color: var(--color-blanco-claro);
     border-radius: 0.21rem;
     border: solid 2px var(--color-verde-oscuro);
-    padding: 0.25em;
+    padding: 0.25em 0.5em; /* Aumentar el padding horizontal */
     font-size: .9em;
-    text-decoration: none;
     text-align: center;
-
-    &:hover{
-        background-color: var(--color-verde-claro);
-        border: 2px solid var(--color-texto-negro);
-    }
-
-    a {
-        color: var(--color-verde-oscuro);
-        text-decoration: none;
-    
-        &:hover{
-            color: var(--color-texto-blanco);
-        }
-    }
+    transition: background-color 0.3s, border 0.3s; /* Añadir transición para suavizar el hover */
 }
 
+.menuNav li:hover {
+    background-color: var(--color-verde-claro);
+    border: 2px solid var(--color-texto-negro);
+}
 
+.menuNav li a {
+    color: var(--color-verde-oscuro);
+    text-decoration: none;
+    display: block; /* Asegurar que el enlace ocupe todo el li */
+    padding: 0.25em 0.5em; /* Aumentar el padding del enlace */
+    transition: color 0.3s; /* Añadir transición para suavizar el hover */
+}
 
-
+.menuNav li a:hover {
+    color: var(--color-texto-blanco);
+}
 
 /* main */
 
@@ -96,38 +100,30 @@ main {
     gap: 1rem;
 }
 
-.tarj-index{
-    display: flex;
+.tarj-index {
+    text-align: center;
     flex-direction: column;
     align-items: center;
-    padding: 3em;
+    padding: 1em;
+    width: 90%;
     border-radius: .5em;
-    margin: 1em;
+    margin: .5em;
     background-color: var(--color-verde-claro);
     max-width: 28rem;
 }
 
-.tarj-img{
+.tarj-img {
     width: 100%;
     border-radius: .5em;
 }
 
-/* .btn-tarj-index */
 .titulo-tarj {
     margin: .5em;
     align-items: center;
-    font-weight: 400;
-    color: var(--color-texto-negro);
+    font-weight: 600;
+    color: var(--color-texto-blanco);
+    text-transform: uppercase;
 }
-
-
-/* <div class="Productos">
-            <h2>NUESTROS PRODUCTOS</h2>
-            <div class="tarj-index">
-                <img class="tarj-img" src="./img/pastas1.png" alt="pastas">
-                <h3 class="titulo-tarj">Pastas</h3>
-                <button class="bt-tarj-index"> VER </button>
-            </div> */
 
 .main,
 h3 {
@@ -140,19 +136,19 @@ h3 {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-
 /* FOOTER */
 .logoWhatsapp {
     width: 3.5em;
     position: fixed;
     right: .5em;
     bottom: 1em;
+    transition: width 0.3s, border 0.3s; /* Añadir transición para suavizar el hover */
+}
 
-    &:hover {
-        width: 4.5em;
-        border-radius: 3em;
-        border: 3px solid var(--color-verde-claro);
-    }
+.logoWhatsapp:hover {
+    width: 4.5em;
+    border-radius: 3em;
+    border: 3px solid var(--color-verde-claro);
 }
 
 footer {
@@ -180,12 +176,13 @@ footer p {
     text-align: justify;
     cursor: pointer;
     width: 4em;
+    transition: width 0.3s, border 0.3s; /* Añadir transición para suavizar el hover */
+}
 
-    &:hover {
-        width: 4.5em;
-        border-radius: 3em;
-        border: 3px solid var(--color-verde-claro);
-    }
+.logoRedes:hover {
+    width: 4.5em;
+    border-radius: 3em;
+    border: 3px solid var(--color-verde-claro);
 }
 
 .none {
