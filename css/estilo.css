@@ -10,13 +10,15 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Asegura que padding y border se incluyan en el ancho y alto total */
+    box-sizing: border-box;
+    /* Asegura que padding y border se incluyan en el ancho y alto total */
 }
 
 /* variables */
 :root {
     --color-verde-oscuro: #5c764b;
     --color-verde-claro: #66825a;
+    --color-verde-sombra: #66825a2f;
     --color-blanco-claro: #efefe9;
     --color-blanco-gris: #ebeae4;
     --color-naranja-medialuna: #dd5400;
@@ -53,35 +55,46 @@ header {
 .menuNav {
     display: flex;
     justify-content: flex-end;
-    gap: .5em; /* Ajustar el espaciado entre los elementos */
+    gap: .5em;
+    /* Ajustar el espaciado entre los elementos */
 }
 
-.menuNav li {
+/* .menuNav li*/
+/* Reglas globales para <li> */
+li {
     cursor: pointer;
     list-style: none;
-    background-color: var(--color-blanco-claro);
+    background-color: var(--color-verde-sombra);
     border-radius: 0.21rem;
     border: solid 2px var(--color-verde-oscuro);
-    padding: 0.25em 0.5em; /* Aumentar el padding horizontal */
+    padding: 0.25em 0.5em;
+    /* Aumentar el padding horizontal */
     font-size: .9em;
     text-align: center;
-    transition: background-color 0.3s, border 0.3s; /* Añadir transición para suavizar el hover */
+    transition: background-color 0.3s, border 0.3s;
+    /* Añadir transición para suavizar el hover */
 }
 
-.menuNav li:hover {
+/* .menuNav li:hover*/
+li:hover {
     background-color: var(--color-verde-claro);
     border: 2px solid var(--color-texto-negro);
 }
 
-.menuNav li a {
+/* .menuNav li a { */
+li a {
     color: var(--color-verde-oscuro);
     text-decoration: none;
-    display: block; /* Asegurar que el enlace ocupe todo el li */
-    padding: 0.25em 0.5em; /* Aumentar el padding del enlace */
-    transition: color 0.3s; /* Añadir transición para suavizar el hover */
+    display: block;
+    /* Asegurar que el enlace ocupe todo el li */
+    padding: 0.25em 0.5em;
+    /* Aumentar el padding del enlace */
+    transition: color 0.3s;
+    /* Añadir transición para suavizar el hover */
 }
 
-.menuNav li a:hover {
+/* .menuNav li a:hover { */
+li a:hover {
     color: var(--color-texto-blanco);
 }
 
@@ -96,44 +109,67 @@ main {
 
 .productos {
     display: grid;
-    grid-template-columns: repeat(4, 2fr);
-    gap: 1rem;
+    /*    grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* Ajusta el ancho mínimo y máximo de las columnas */
+    gap: .5em;
+    background-color: var(--color-verde-sombra);
+    border-radius: .5em;
+    margin-bottom: 1em;
+}
+
+.tarj-container {
+    display: flex;
+    justify-content: center;
+    /* Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente si se desea */
+    padding: 1em;
+    width: 100%;
 }
 
 .tarj-index {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     text-align: center;
     flex-direction: column;
     align-items: center;
     padding: 1em;
-    width: 90%;
     border-radius: .5em;
-    margin: .5em;
     background-color: var(--color-verde-claro);
-    max-width: 28rem;
+    width: 100%;
+    height: 100%; /*Asegura que todas las tarjetas tengan el mismo alto.*/
 }
 
 .tarj-img {
     width: 100%;
+    height: auto;/*asegura que no se deforme*/
     border-radius: .5em;
 }
 
 .titulo-tarj {
     margin: .5em;
     align-items: center;
-    font-weight: 600;
+    font-weight: 800;
     color: var(--color-texto-blanco);
     text-transform: uppercase;
-}
-
-.main,
-h3 {
-    font-weight: 100;
-    font-size: 2em;
+    word-wrap: break-word; /* Permite que las palabras largas se rompan para ajustarse al contenedor */
+    overflow: hidden; /* Oculta cualquier desbordamiento */
+    text-overflow: ellipsis; /* Añade puntos suspensivos (...) si el texto es demasiado largo */
+    white-space: nowrap; /* Evita que el texto se envuelva en una nueva línea */
 }
 
 .sobreNosotros p {
     line-height: 1.5em;
+    margin: 1rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.titulos {
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* FOOTER */
@@ -142,7 +178,7 @@ h3 {
     position: fixed;
     right: .5em;
     bottom: 1em;
-    transition: width 0.3s, border 0.3s; /* Añadir transición para suavizar el hover */
+    transition: width 0.3s, border 0.3s;
 }
 
 .logoWhatsapp:hover {
@@ -176,7 +212,7 @@ footer p {
     text-align: justify;
     cursor: pointer;
     width: 4em;
-    transition: width 0.3s, border 0.3s; /* Añadir transición para suavizar el hover */
+    transition: width 0.3s, border 0.3s;
 }
 
 .logoRedes:hover {
@@ -202,3 +238,9 @@ h4 {
         display: none;
     }
 }
+
+/* @media (max-width: 300px) {
+    .productos {
+        grid-template-columns: 1fr; /* Una sola columna en pantallas muy pequeñas 
+    }
+} */
