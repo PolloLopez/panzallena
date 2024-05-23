@@ -10,8 +10,7 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    /* Asegura que padding y border se incluyan en el ancho y alto total */
+    box-sizing: border-box;/* Asegura que padding y border se incluyan en el ancho y alto total */
 }
 
 /* variables */
@@ -49,17 +48,15 @@ header {
 
 .encabezado {
     margin-left: 0.5em;
-    margin-top: none;
+    margin-top: 0;
 }
 
 .menuNav {
     display: flex;
     justify-content: flex-end;
-    gap: .5em;
-    /* Ajustar el espaciado entre los elementos */
+    gap: .5em;    /* Ajusta el espaciado entre los elementos */
 }
 
-/* .menuNav li*/
 /* Reglas globales para <li> */
 li {
     cursor: pointer;
@@ -67,64 +64,53 @@ li {
     background-color: var(--color-verde-sombra);
     border-radius: 0.21rem;
     border: solid 2px var(--color-verde-oscuro);
-    padding: 0.25em 0.5em;
-    /* Aumentar el padding horizontal */
+    padding: 0.25em 0.5em;/* Aumentar el padding horizontal */
     font-size: .9em;
     text-align: center;
-    transition: background-color 0.3s, border 0.3s;
-    /* Añadir transición para suavizar el hover */
+    transition: background-color 0.3s, border 0.3s;/* Añadir transición para suavizar el hover */
 }
 
-/* .menuNav li:hover*/
 li:hover {
     background-color: var(--color-verde-claro);
     border: 2px solid var(--color-texto-negro);
 }
 
-/* .menuNav li a { */
+/* Estilo para enlaces dentro de <li> */
 li a {
     color: var(--color-verde-oscuro);
     text-decoration: none;
-    display: block;
-    /* Asegurar que el enlace ocupe todo el li */
-    padding: 0.25em 0.5em;
-    /* Aumentar el padding del enlace */
-    transition: color 0.3s;
-    /* Añadir transición para suavizar el hover */
+    display: block;/* Asegurar que el enlace ocupe todo el li */
+    padding: 0.25em 0.5em;/* Aumentar el padding del enlace */
+    transition: color 0.3s; /* Añadir transición para suavizar el hover */
 }
 
-/* .menuNav li a:hover { */
 li a:hover {
     color: var(--color-texto-blanco);
 }
 
 /* main */
-
 main {
     margin: .5em;
     color: var(--color-texto-negro);
 }
 
 /* TARJETAS INDEX nuestros productos*/
-
 .productos {
     display: grid;
-    /*    grid-template-columns: repeat(2, 1fr); /* Dos columnas de igual tamaño */
-    grid-template-columns: repeat(auto-fit, minmax(150px, 2fr));
-    /* Ajusta el ancho mínimo y máximo de las columnas */
-    gap: .5em;
+    grid-template-columns: repeat(2, 1fr);/* Define dos columnas de igual ancho */
+    gap: .2em;
     background-color: var(--color-verde-sombra);
     border-radius: .5em;
+    margin-left: none;
 }
 
 .tarj-container {
     display: flex;
-    justify-content: center;
-    /* Centra horizontalmente */
-    align-items: center;
-    /* Centra verticalmente si se desea */
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente*/
     padding: 1rem;
     width: 100%;
+    box-sizing: border-box; /* Asegura que el padding se incluya en el tamaño total */
 }
 
 .tarj-index {
@@ -132,19 +118,24 @@ main {
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
-    flex-direction: column;
     align-items: center;
-    padding: 1em;
+    padding: .5em;
     border-radius: .5em;
     background-color: var(--color-verde-claro);
     width: 100%;
-    height: 100%; /*Asegura que todas las tarjetas tengan el mismo alto.*/
+    min-height: auto; /* Ajusta el mínimo alto de las tarjetas */
+    box-sizing: border-box; /* Asegura que el padding se incluya en el tamaño total */
+    height: 100%; /*Asegura que todas las tarjetas tengan el mismo tamaño */
 }
 
 .tarj-img {
-    width: 100%;
-    height: auto;/*asegura que no se deforme*/
+    max-width: 100%;    /* Asegura que la imagen no se desborde del contenedor */
+    height: auto;    /*asegura que no se deforme*/
     border-radius: .5em;
+    box-sizing: border-box; /* Asegura que el padding se incluya en el tamaño total */
+    object-fit: cover; /* Escala la imagen para cubrir el contenedor, recortando si es necesario */
+    min-width: 50%;   /* Ancho fijo deseado */
+    min-height:80%;
 }
 
 .titulo-tarj {
@@ -153,10 +144,10 @@ main {
     font-weight: 800;
     color: var(--color-texto-blanco);
     text-transform: uppercase;
-    word-wrap: break-word; /* Permite que las palabras largas se rompan para ajustarse al contenedor */
-    overflow: hidden; /* Oculta cualquier desbordamiento */
-    text-overflow: ellipsis; /* Añade puntos suspensivos (...) si el texto es demasiado largo */
-    white-space: nowrap; /* Evita que el texto se envuelva en una nueva línea */
+    word-wrap: break-word;    /* Permite que las palabras largas se rompan para ajustarse al contenedor */
+    overflow: hidden;    /* Oculta cualquier desbordamiento */
+    text-overflow: ellipsis;    /* Añade puntos suspensivos (...) si el texto es demasiado largo */
+    white-space: nowrap;    /* Evita que el texto se envuelva en una nueva línea */
 }
 
 .sobreNosotros p {
@@ -164,6 +155,7 @@ main {
     margin: 1rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', Verdana, sans-serif;
 }
+
 .titulos {
     text-transform: uppercase;
     display: flex;
@@ -205,7 +197,7 @@ footer p {
 }
 
 .logoRedes {
-    margin-top: none;
+    margin-top: 0;
     margin-left: 2em;
     margin-right: 2em;
     text-align: justify;
@@ -232,14 +224,54 @@ h4 {
 }
 
 /* medias queries */
-@media (max-width: 500px) {
-    .titulo {
-        display: none;
+
+@media (max-width: 300px){ /*panallas menores a 300px*/
+    .productos {
+        grid-template-columns: 1fr; /*una sola columna*/
+    }
+}
+@media (max-width: 990) { /* pantallas menores a 991px */
+    .productos {
+        grid-template-columns: repeat(2, 1fr);/* Dos columnas */
     }
 }
 
-/* @media (max-width: 300px) {
+@media (min-width: 991px) { /* pantallas mayores a 991px */
     .productos {
-        grid-template-columns: 1fr; /* Una sola columna en pantallas muy pequeñas 
+        grid-template-columns: repeat(4, 1fr);
     }
-} */
+}
+
+@media (max-width: 500px) { /* pantallas menores a 500px */
+    .titulo {
+        display: none; 
+    }
+}
+
+
+/* Ajustes adicionales */
+@media (max-width: 483px) {
+    .productos {
+        grid-template-columns: 1fr;
+        gap: .5em;
+    }
+
+    .tarj-container {
+        padding: 0.5rem;
+        height: auto;
+    }
+
+    .tarj-index {
+        padding: 0.5rem;
+        min-height: auto; /* Elimina el mínimo alto */
+    }
+
+    .tarj-img {
+        max-width: 100%; /* Ajusta el ancho máximo de la imagen */
+        height: auto;
+    }
+
+    .titulo-tarj {
+        white-space: normal; /* Permite que el texto se envuelva en pantallas pequeñas */
+    }
+}
