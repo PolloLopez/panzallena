@@ -225,12 +225,12 @@ h4 {
 
 /* medias queries */
 
-@media (max-width: 300px){ /*panallas menores a 300px*/
+@media (max-width: 250px){ /*panallas menores a 300px*/
     .productos {
         grid-template-columns: 1fr; /*una sola columna*/
     }
 }
-@media (max-width: 990) { /* pantallas menores a 991px */
+@media (min-width:251px) and (max-width: 990) { /* pantallas menores a 991px */
     .productos {
         grid-template-columns: repeat(2, 1fr);/* Dos columnas */
     }
@@ -252,7 +252,6 @@ h4 {
 /* Ajustes adicionales */
 @media (max-width: 483px) {
     .productos {
-        grid-template-columns: 1fr;
         gap: .5em;
     }
 
@@ -261,17 +260,19 @@ h4 {
         height: auto;
     }
 
-    .tarj-index {
-        padding: 0.5rem;
-        min-height: auto; /* Elimina el mínimo alto */
-    }
-
     .tarj-img {
-        max-width: 100%; /* Ajusta el ancho máximo de la imagen */
+        max-width: 100%; /*Ajusta el ancho máximo de la imagen */
         height: auto;
     }
 
+
+    .tarj-index {
+        padding: 0.5rem;
+        min-height: auto; /*Elimina el mínimo alto */
+    }
+
+    
     .titulo-tarj {
-        white-space: normal; /* Permite que el texto se envuelva en pantallas pequeñas */
+        white-space: normal;/* Permite que el texto se envuelva en pantallas pequeñas*/ 
     }
 }
