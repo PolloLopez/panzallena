@@ -1,0 +1,360 @@
+/* fuentes */
+/* iniciales */
+@import url('https://fonts.googleapis.com/css2?family=Rakkas&display=swap');
+
+/* interior logo */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rakkas&display=swap');
+
+/* general */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Asegura que padding y border se incluyan en el ancho y alto total */
+}
+
+/* variables */
+:root {
+    --color-verde-oscuro: #5c764b;
+    --color-verde-claro: #66825a;
+    --color-verde-sombra: #66825a2f;
+    --color-blanco-claro: #efefe9;
+    --color-blanco-gris: #ebeae4;
+    --color-naranja-medialuna: #dd5400;
+    --color-texto-negro: #000000;
+    --color-texto-blanco: #ffffff;
+}
+
+/**** body, contiene el header, main y footer ****/
+
+body {
+    background-color: var(--color-blanco-claro);
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+}
+
+/**** header ****/
+header {
+    margin: 0.5rem;
+    /* background-color: var(--color-blanco-gris); */
+    height: auto;
+    /* border: 1px solid var(--color-verde-claro); */
+}
+
+.imgLogo {
+    height: 5em;
+    margin: auto;
+}
+
+.encabezado {
+    margin-left: 0.5em;
+    margin-top: 0;
+}
+
+#menuNav {
+    display: flex;
+    justify-content: flex-end;
+    gap: .5em;
+    /* Ajusta el espaciado entre los elementos */
+}
+
+/* Reglas globales para <li> */
+li {
+    cursor: pointer;
+    list-style: none;
+    background-color: var(--color-verde-sombra);
+    border-radius: 0.21rem;
+    border: solid 2px var(--color-verde-oscuro);
+    padding: 0.25em 0.5em;
+    /* Aumentar el padding horizontal */
+    font-size: .9em;
+    text-align: center;
+    transition: background-color 0.3s, border 0.3s;
+    /* Añadir transición para suavizar el hover */
+}
+
+li:hover {
+    background-color: var(--color-verde-claro);
+    border: 2px solid var(--color-texto-negro);
+}
+
+/* Estilo para enlaces dentro de <li> */
+li a {
+    color: var(--color-verde-oscuro);
+    text-decoration: none;
+    display: block;
+    /* Asegurar que el enlace ocupe todo el li */
+    padding: 0.25em 0.5em;
+    /* Aumentar el padding del enlace */
+    transition: color 0.3s;
+    /* Añadir transición para suavizar el hover */
+}
+
+li a:hover {
+    color: var(--color-texto-blanco);
+}
+
+navbar-toggler {
+    margin-right: 5rem;
+}
+
+/*** main ***/
+main {
+    margin: .5em;
+    color: var(--color-texto-negro);
+}
+
+/* TARJETAS catalogo*/
+.productosIndex {
+    display: flex;
+    background-color: greenyellow;
+}
+
+
+.tarj-index {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: .5em;
+    border-radius: .3rem;
+    margin: .5rem;
+    background-color: var(--color-verde-claro);
+    width: 100%;
+    min-height: auto;
+ /*   Ajusta el mínimo alto de las tarjetas */
+    box-sizing: border-box;
+    /*Asegura que el padding se incluya en el tamaño total */
+    height: 100%;
+    /*Asegura que todas las tarjetas tengan el mismo tamaño */
+}
+
+.tarj-titulo {
+   /* margin: .5em;
+    align-items: center;
+    font-weight: 600;
+    color: var(--color-texto-blanco);
+    text-transform: uppercase;
+    word-wrap: break-word;
+    Permite que las palabras largas se rompan para ajustarse al contenedor 
+    overflow: hidden;
+    Oculta cualquier desbordamiento
+    text-overflow: ellipsis;
+    Añade puntos suspensivos (...) si el texto es demasiado largo 
+    white-space: nowrap;
+    Evita que el texto se envuelva en una nueva línea */
+
+/*producto-titulo en practicaJS*/
+
+min-height: auto;
+font-size: 2.5rem;
+max-height: 10rem;
+margin-bottom: 0.5rem;
+margin-top: 1rem;
+max-width: 100%;
+min-width: auto;
+overflow: hidden;
+/* Oculta el texto que se desborda del contenedor */
+text-overflow: ellipsis;
+/* Agrega puntos suspensivos (...) al final del texto que se desborda */
+white-space: nowrap;
+/* Evita que el texto se divida en múltiples líneas */
+
+}
+
+.tarj-img {
+    max-width: 100%;
+    /* Asegura que la imagen no se desborde del contenedor */
+    height: auto;
+    /*asegura que no se deforme*/
+    border-radius: .5em;
+    box-sizing: border-box;
+    /* Asegura que el padding se incluya en el tamaño total */
+    object-fit: cover;
+    /* Escala la imagen para cubrir el contenedor, recortando si es necesario */
+    min-width: 50%;
+    /* Ancho fijo deseado */
+    min-height: 80%;
+}
+
+.tarj-descrip{
+    background-color: red;
+}
+
+.tarj-precio {
+    background-color: blue;
+}
+
+
+/*** NOSOTROS ***/
+
+
+.descripcion /* nosotros */
+
+/* .tarj-container */
+    {
+    display: flex;
+    font-size: 2rem;
+    justify-content: center;
+    /*Centra horizontalmente */
+    align-items: center;
+    /* Centra verticalmente*/
+    padding: 1rem;
+    width: auto;
+    color: var(--color-texto-negro);
+    box-sizing: border-box;
+    /*Asegura que el padding se incluya en el tamaño total  */
+}
+
+.sobreNosotros {
+    margin-top: 1em;
+}
+
+.sobreNosotros p {
+    text-align: justify;
+    line-height: 1.5em;
+    margin: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', Verdana, sans-serif;
+}
+
+.titulos {
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* FOOTER */
+.logoWhatsapp {
+    width: 3.5em;
+    position: fixed;
+    right: .5em;
+    bottom: 1em;
+    transition: width 0.3s, border 0.3s;
+}
+
+.logoWhatsapp:hover {
+    width: 4.5em;
+    border-radius: 3em;
+    border: 3px solid var(--color-verde-claro);
+}
+
+footer {
+    padding: 3rem;
+    text-align: center;
+    margin-top: .2em;
+    margin-bottom: .5em;
+    max-height: 10em;
+    text-transform: uppercase;
+}
+
+.seguinos {
+    font-size: .75em;
+    margin-left: 1rem;
+    color: #5c764b;
+}
+
+footer p {
+    color: var(--color-texto-negro);
+    font-size: .8rem;
+}
+
+.firma {
+    margin-top: .5em;
+}
+
+.logoRedes {
+    margin-top: 0;
+    margin-left: 2em;
+    margin-right: 2em;
+    text-align: justify;
+    cursor: pointer;
+    width: 4em;
+    transition: width 0.3s, border 0.3s;
+}
+
+.logoRedes:hover {
+    width: 4.5em;
+    border-radius: 3em;
+    border: 3px solid var(--color-verde-claro);
+}
+
+.none {
+    display: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    color: var(--color-verde-oscuro);
+}
+
+/* medias queries */
+
+@media (max-width: 250px) {
+
+    /*panallas menores a 300px*/
+    .productos {
+        grid-template-columns: 1fr;
+        /*una sola columna*/
+    }
+}
+
+@media (min-width:251px) and (max-width: 990) {
+
+    /* pantallas menores a 991px */
+    .productos {
+        grid-template-columns: repeat(2, 1fr);
+        /* Dos columnas */
+    }
+}
+
+@media (min-width: 991px) {
+
+    /* pantallas mayores a 991px */
+    .productos {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+
+    /* pantallas menores a 500px */
+    .titulo {
+        display: none;
+    }
+}
+
+
+/* Ajustes adicionales */
+@media (max-width: 483px) {
+    .productos {
+        gap: .5em;
+    }
+
+    .tarj-container {
+        padding: 0.5rem;
+        height: auto;
+    }
+
+    .tarj-img {
+        max-width: 100%;
+        /*Ajusta el ancho máximo de la imagen */
+        height: auto;
+    }
+
+
+    .tarj-index {
+        padding: 0.5rem;
+        min-height: auto;
+        /*Elimina el mínimo alto */
+    }
+
+
+    .titulo-tarj {
+        white-space: normal;
+        /* Permite que el texto se envuelva en pantallas pequeñas*/
+    }
+}

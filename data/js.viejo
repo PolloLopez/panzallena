@@ -1,4 +1,22 @@
 
+
+
+
+// ir a cada seccion
+// Obtener el enlace "Nosotros" y la sección "sobreNosotros"
+//const nosotrosLink = document.querySelector('a[href="nosotros"] ');
+//const nosotrosSection = document.querySelector('.sobreNosotros');
+
+// Agregar evento de clic al enlace
+//nosotrosLink.addEventListener('click', function (event) {
+//    // Prevenir el comportamiento predeterminado del enlace
+//    event.preventDefault();
+
+    // Hacer scroll suave hacia la sección "sobreNosotros"
+   // nosotrosSection.scrollIntoView({ behavior: 'smooth' });
+//});
+
+
 // Obtener todos los enlaces que apuntan a secciones dentro de la página
 const navLinks = document.querySelectorAll('a[href^="#"]');
 
@@ -19,43 +37,27 @@ navLinks.forEach(link => {
 
 
 
-let productos = [];
+// Selecciona el contenedor de productos
+const contenedorProductos = document.querySelector("#productos");
 
-// Lista de categorías y sus contenedores asociados
-const categorias = [
-    { nombre: "RAVIOLONES", contenedor: "#contRaviolones" },
-    { nombre: "SORRENTINOS", contenedor: "#contSorrentinos" },
-    { nombre: "CAPELETTIS", contenedor: "#contCapelettis" },
-    { nombre: "CANELONES", contenedor: "#contCanelones" },
-    { nombre: "TALLARINES", contenedor: "#contTallarines" },
-    { nombre: "NOCONES", contenedor: "#contNocones" },
-    { nombre: "LASAGNA", contenedor: "#contLasagna" },
-    { nombre: "SALSAS", contenedor: "#contSalsas" },
-    { nombre: "POSTRES", contenedor: "#contPostres" }
-];
+
+let productos = [];
 
 /*traer de base de datos local */
 fetch("../data/productos.json")
     .then(res => res.json())
     .then(data => {
         productos = data;
-        
-        // Iterar sobre las categorías y mostrar los productos
-        categorias.forEach(categoria => {
-            const productosFiltrados = productos.filter(producto => producto.categoria === categoria.nombre);
-            const contenedor = document.querySelector(categoria.contenedor);
-            mostrarProductos(productosFiltrados, contenedor);
-        });
+        // Filtrar los productos de la categoría "salsas"
+        const productosSalsas = productos.filter(producto => producto.categoria === "salsas");
+        mostrarProductos(productosSalsas);
     });
 
-// Función para mostrar los productos en el contenedor especificado
-const mostrarProductos = (productos, contenedor) => {
-    // Limpiar el contenedor de productos antes de mostrar los nuevos productos
-    contenedor.innerHTML = "";
-
+// Función para mostrar los productos
+const mostrarProductos = (productos) => {
     productos.forEach((producto) => {
         const div = document.createElement("div");
-        div.classList.add("tarj-container");
+        div.classList.add("tarj-container"); // Asegúrate de que coincide con tu HTML
         div.innerHTML = `
             <div class="tarj-index">
                 <img class="tarj-img" src="${producto.img}" alt="${producto.titulo}">
@@ -66,13 +68,14 @@ const mostrarProductos = (productos, contenedor) => {
             </div>
         `;
 
+
         // Agregar el evento al botón
         div.querySelector(".producto-btn").addEventListener("click", () => {
             agregarAlCarrito(producto);
         });
 
         // Agregar el div al contenedor de productos
-        contenedor.appendChild(div);
+        contenedorProductos.appendChild(div);
     });
 };
 
@@ -80,3 +83,9 @@ const mostrarProductos = (productos, contenedor) => {
 const agregarAlCarrito = (producto) => {
     console.log(`Producto añadido: ${producto.titulo}`);
 };
+
+// Llama a la función para mostrar los productos pasándole el array de productos
+mostrarProductos(productos);
+
+
+

@@ -1,0 +1,191 @@
+[
+    {
+        "titulo": "Verdura y ricota",
+        "precio": 1000,
+        "descripcion": "Bondiola al malbec cocida con hiervas; masa con tinta de remolacha",
+        "img": "../img/pastas1.png",
+        "categoria": "RAVIOLONES"
+    },
+    {
+        "titulo": "Roast beef al malbec",
+        "precio": 2000,
+        "descripcion": "Roast beaf al malbec cocida con hiervas; masa con tinta de remolacha.Bondiola al malbec cocida con hiervas.",
+        "img": "../img/pastas2.png",
+        "categoria": "RAVIOLONES"
+    },
+    {
+        "titulo": "Verdura y pollo",
+        "precio": 3000,
+        "descripcion": " con hiervas; masa con tinta de remolacha",
+        "img": "../img/pastas3.png",
+        "categoria": "RAVIOLONES"
+    },
+    {
+        "titulo": "bondiola a la cerveza",
+        "precio": 4000,
+        "descripcion": "Basa con tinta de remolacha",
+        "img": "../img/pastas4.png",
+        "categoria": "RAVIOLONES"
+    },
+    {
+        "titulo": "cheddar, panceta y pollo ",
+        "precio": 5000,
+        "descripcion": "Bondiola al malbec cocida con hiervas; de remolacha",
+        "img": "../img/pastas5.png",
+        "categoria": "RAVIOLONES"
+    },
+    {
+        "titulo": "salmon rosado",
+        "precio": 6000,
+        "descripcion": "cocida con hiervas; masa con tinta de remolacha",
+        "img": "../img/pastas6.png",
+        "categoria": "RAVIOLONES"
+    },
+    {
+        "titulo": "CALABAZA",
+        "precio": 1000,
+        "descripcion": "Bondiola al malbec cocida con hiervas; masa con tinta de remolacha",
+        "img": "../img/pastas7.png",
+        "categoria": "SORRENTINOS"
+    },
+    {
+        "titulo": "jamon y queso",
+        "precio": 1000,
+        "descripcion": "Bondiola al malbec cocida con hiervas; masa con tinta de remolacha",
+        "img": "../img/pastas8.png",
+        "categoria": "SORRENTINOS"
+    },
+    {
+        "titulo": "Cinco quesos",
+        "precio": 1000,
+        "descripcion": "Roque - sardo - reggianito - pategras - briecocida con hiervas; masa con tinta de remolacha",
+        "img": "../img/pastas11.png",
+        "categoria": "SORRENTINOS"
+    },
+    {
+        "titulo": "boniato",
+        "precio": 2000,
+        "descripcion": "eso que se parece una batata; masa con tinta de remolacha.Bondiola al malbec cocida con hiervas.",
+        "img": "../img/pastas12.png",
+        "categoria": "SORRENTINOS"
+    },
+    {
+        "titulo": "ricota y nuez",
+        "precio": 2000,
+        "descripcion": "masa con tinta de remolacha. Bondiola al malbec cocida con hiervas.",
+        "img": "../img/pastas13.png",
+        "categoria": "SORRENTINOS"
+    },
+    {
+        "titulo": "Verdura y pollo",
+        "precio": 3100,
+        "descripcion": " con hiervas; masa con tinta de remolacha",
+        "img": "../img/pastas14.png",
+        "categoria": "CAPELETTIS"
+    },
+    {
+        "titulo": "Verdura y ricota",
+        "precio": 3000,
+        "descripcion": " con hiervas;e remolacha",
+        "img": "../img/pastas15.png",
+        "categoria": "CAPELETTIS"
+    },
+    {
+        "titulo": "Verdura y QUESO",
+        "precio": 3000,
+        "descripcion": " con hiervas; masa con tinta de remolacha",
+        "img": "../img/pastas16.png",
+        "categoria": "CANELONES"
+    },
+    {
+        "titulo": "PURO HUEVO",
+        "precio": 3000,
+        "descripcion": " con hiervas; masa con tinta de remolacha",
+        "img": "../img/pastas17.png",
+        "categoria": "TALLARINES"
+    },
+    {
+        "titulo": "Verdura",
+        "precio": 3000,
+        "descripcion": " con hiervas; masa con tinta de remolacha",
+        "img": "../img/pastas18.png",
+        "categoria": "TALLARINES"
+    },
+    {
+        "titulo": "CLASICOS",
+        "precio": 3000,
+        "descripcion": " con hiervas; masa con tinta de remolacha",
+        "img": "../img/pastas19.png",
+        "categoria": "NOCONES"
+    },
+    {
+        "titulo": "Queso Azul",
+        "precio": 3000,
+        "descripcion": " con hiervas; masa con tinta de remolacha",
+        "img": "../img/pastas20.png",
+        "categoria": "NOCONES"
+    },
+    {
+        "titulo": "nombre postre 3",
+        "precio": 3000,
+        "descripcion": " con hiervas; masa con tinta de remolacha",
+        "img": "../img/pastas21.png",
+        "categoria": "LASAGNA"
+    },
+    {
+        "titulo": "cLASICA",
+        "precio": 3000,
+        "descripcion": "ajo, albahaca y nuez",
+        "img": "../img/pastas22.png",
+        "categoria": "SALSAS"
+    },
+    {
+        "titulo": "Bolognesa",
+        "precio": 3000,
+        "descripcion": " con hiervas; masa con tinta de remolacha",
+        "img": "../img/pastas22.png",
+        "categoria": "SALSAS"
+    },
+    {
+        "titulo": "ROSA",
+        "precio": 3000,
+        "descripcion": " con hiervas; masa con tinta de remolacha",
+        "img": "../img/pastas23.png",
+        "categoria": "SALSAS"
+    },
+    {
+        "titulo": "ESTOFADO",
+        "precio": 3000,
+        "descripcion": " con hiervas; masa con tinta de remolacha",
+        "img": "../img/pastas23.png",
+        "categoria": "SALSAS"
+    },
+    {
+        "titulo": "ALBONDIGA",
+        "precio": 3000,
+        "descripcion": "alMondigas de carne picadiña",
+        "img": "../img/pastas23.png",
+        "categoria": "SALSAS"
+    },
+    {
+        "titulo": "TIRAMISU",
+        "precio": 3000,
+        "descripcion": " con hiervas; masa con tinta de remolacha",
+        "img": "../img/pastas24.png",
+        "categoria": "POSTRES"
+    },
+    {
+        "titulo": "LEMON PIE",
+        "precio": 3000,
+        "descripcion": " con hiervas; masa con tinta de remolacha",
+        "img": "../img/pastas12.png",
+        "categoria": "POSTRES"
+    },
+    {
+        "titulo": "CHOCOTORTA",
+        "precio": 3000,
+        "descripcion": " con hiervas; masa con tinta de remolacha",
+        "img": "../img/pastas25.png",
+        "categoria": "POSTRES"
+    }
+]
