@@ -35,7 +35,8 @@ const categorias = [
 ];
 
 /*traer de base de datos local */
-fetch("../data/productos.json")
+/* fetch("../data/productos.json") */
+fetch("./data/productos.json")
     .then(res => res.json())
     .then(data => {
         productos = data;
@@ -47,6 +48,8 @@ fetch("../data/productos.json")
             mostrarProductos(productosFiltrados, contenedor);
         });
     });
+
+    
 
 // Función para mostrar los productos en el contenedor especificado
 const mostrarProductos = (productos, contenedor) => {
