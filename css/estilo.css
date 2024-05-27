@@ -177,6 +177,15 @@ main {
     /* white-space: nowrap; Evita que el texto se envuelva en una nueva línea */
 }
 
+.tarj-descrip{
+    margin-top: .2rem;
+    margin-bottom: .2rem;
+}
+
+.tarj-precio {
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
 
 /*** NOSOTROS ***/
 
