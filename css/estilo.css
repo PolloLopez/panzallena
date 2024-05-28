@@ -296,6 +296,7 @@ main {
     right: .5em;
     bottom: 1em;
     transition: width 0.3s, border 0.3s;
+    margin: .5em;
 }
 
 .logoWhatsapp:hover {
