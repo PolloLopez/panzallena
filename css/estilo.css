@@ -356,8 +356,6 @@ h4 {
     color: var(--color-verde-oscuro);
 }
 
-
-
 /*** Medias queries ***/
 @media (max-width: 500px) {
 

@@ -60,7 +60,7 @@ const mostrarProductos = (productos, contenedor) => {
                 <h5 class="titulo-tarj">${producto.titulo}</h5>
                 <p class="tarj-descrip">${producto.descripcion}</p>
                 <p class="tarj-precio">$${producto.precio}</p>
-                <button class="btn-agregar">Agregar al carrito</button>
+                <button class="btn-agregar">Agregar al carrito!</button>
             </div>
         `;
 
