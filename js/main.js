@@ -1,6 +1,4 @@
-
-// Obtener todos los enlaces que apuntan a secciones dentro de la página
-const navLinks = document.querySelectorAll('a[href^="#"]');
+const navLinks = document.querySelectorAll('a[href^="#"]');// Obtener todos los enlaces que apuntan a secciones dentro de la página
 
 navLinks.forEach(link => {
     link.addEventListener('click', function(event) {
@@ -16,8 +14,6 @@ navLinks.forEach(link => {
         }
     });
 });
-
-
 
 let productos = [];
 
@@ -35,8 +31,8 @@ const categorias = [
 ];
 
 /*traer de base de datos local */
-fetch("../data/productos.json")
-    .then(res => res.json())
+fetch("./data/productos.json")
+    .then(res => res.json())    
     .then(data => {
         productos = data;
         
@@ -48,7 +44,7 @@ fetch("../data/productos.json")
         });
     });
 
-    
+
 
 // Función para mostrar los productos en el contenedor especificado
 const mostrarProductos = (productos, contenedor) => {
@@ -61,15 +57,15 @@ const mostrarProductos = (productos, contenedor) => {
         div.innerHTML = `
             <div class="tarj-index">
                 <img class="tarj-img" src="${producto.img}" alt="${producto.titulo}">
-                <h3 class="titulo-tarj">${producto.titulo}</h3>
+                <h5 class="titulo-tarj">${producto.titulo}</h5>
                 <p class="tarj-descrip">${producto.descripcion}</p>
                 <p class="tarj-precio">$${producto.precio}</p>
-                <button class="producto-btn">Agregar al carrito</button>
+                <button class="btn-agregar">Agregar al carrito</button>
             </div>
         `;
 
         // Agregar el evento al botón
-        div.querySelector(".producto-btn").addEventListener("click", () => {
+        div.querySelector(".btn-agregar").addEventListener("click", () => {
             agregarAlCarrito(producto);
         });
 

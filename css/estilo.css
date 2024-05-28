@@ -10,7 +10,8 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;/* Asegura que padding y border se incluyan en el ancho y alto total */
+    box-sizing: border-box;
+    /* Asegura que padding y border se incluyan en el ancho y alto total */
 }
 
 /* variables */
@@ -54,7 +55,8 @@ header {
 .menuNav {
     display: flex;
     justify-content: flex-end;
-    gap: .5em;    /* Ajusta el espaciado entre los elementos */
+    gap: .5em;
+    /* Ajusta el espaciado entre los elementos */
 }
 
 /* Reglas globales para <li> */
@@ -64,10 +66,12 @@ li {
     background-color: var(--color-verde-sombra);
     border-radius: 0.21rem;
     border: solid 2px var(--color-verde-oscuro);
-    padding: 0.25em 0.5em;/* Aumentar el padding horizontal */
+    padding: 0.25em 0.5em;
+    /* Aumentar el padding horizontal */
     font-size: .9em;
     text-align: center;
-    transition: background-color 0.3s, border 0.3s;/* Añadir transición para suavizar el hover */
+    transition: background-color 0.3s, border 0.3s;
+    /* Añadir transición para suavizar el hover */
 }
 
 li:hover {
@@ -79,9 +83,12 @@ li:hover {
 li a {
     color: var(--color-verde-oscuro);
     text-decoration: none;
-    display: block;/* Asegurar que el enlace ocupe todo el li */
-    padding: 0.25em 0.5em;/* Aumentar el padding del enlace */
-    transition: color 0.3s; /* Añadir transición para suavizar el hover */
+    display: block;
+    /* Asegurar que el enlace ocupe todo el li */
+    padding: 0.25em 0.5em;
+    /* Aumentar el padding del enlace */
+    transition: color 0.3s;
+    /* Añadir transición para suavizar el hover */
 }
 
 li a:hover {
@@ -102,49 +109,67 @@ main {
 
 
 /**** GPT ****/
-.productos {
+
+/*.productos {
     display: flex;
-    flex-wrap: wrap; /* Permite que se envuelvan en filas */
-    justify-content: center; /* Centra los elementos horizontalmente */
+    flex-wrap: wrap; /* Permite que se envuelvan en filas 
+    justify-content: center; /* Centra los elementos horizontalmente 
     gap: .5em;
     background-color: var(--color-verde-sombra);
     border-radius: .5em;
-    padding: 1em; /* Agrega un poco de relleno para la estética */
+    padding: 1em; /* Agrega un poco de relleno para la estética 
+}*/
+
+
+/* Productos Section */
+.productos {
+    display: grid;
+    gap: 0.5em;
+    background-color: var(--color-verde-sombra);
+    border-radius: 0.5em;
+    padding: 1em;
+    /* Responsive grid columns using auto-fit and minmax */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    justify-content: center;
 }
 
+/* Responsive grid columns */
+/* @media (max-width: 1024px) {
+    .productos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .productos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .productos {
+        grid-template-columns: 1fr;
+    }
+} */
+
 .tarj-container {
-    box-sizing: border-box; /* Asegura que el padding se incluya en el tamaño total */
+    box-sizing: border-box;
+    /* Asegura que el padding se incluya en el tamaño total */
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1rem;
+    max-height: 70vh;
+    overflow: hidden;
+    /* Evita que el contenido sobresalga */
 }
 
 /*** Medias queries ***/
 
-/* Para pantallashasta 400px: 1 fila */
-@media (max-width: 400px) {
-    .tarj-container {
-        flex: 1 1 calc(100% - 1em); /* Toma el 50% del ancho menos el espacio del gap */
-    }
-}
-
-/* Para pantallas de 401px a 1100px: 3 filas */
-@media (min-width: 401px) and (max-width: 690px) {
-    .tarj-container {
-        flex: 1 1 calc(31% -1.5em); /* Toma el 33.33% del ancho menos el espacio del gap */
-    }
-}
-
-/* Para pantallas superiores a 691px: 4 filas */
-@media (min-width: 691px) {
-    .tarj-container {
-        flex: 1 1 calc(25% - 1em); /* Toma el 25% del ancho menos el espacio del gap /*/
-    }
-}
 
 .tarj-index {
-    width: 100%; /* Asegura que ocupe todo el ancho del contenedor padre */
+    width: 100%;
+    /* Asegura que ocupe todo el ancho del contenedor padre */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -152,39 +177,92 @@ main {
     padding: 1em;
     border-radius: .5em;
     background-color: var(--color-verde-claro);
-    box-sizing: border-box; /* Asegura que el padding se incluya en el tamaño total */
-    height: 100%; /* Asegura que todas las tarjetas tengan el mismo tamaño */
-    min-height: 150px; /* Alto mininmo*/
+    box-sizing: border-box;
+    /* Asegura que el padding se incluya en el tamaño total */
+    height: 100%;
+    /* Asegura que todas las tarjetas tengan el mismo tamaño */
+    min-height: 40%;
+    /*Alto mininmo */
+    position: relative;
+    /* Para posicionar absolutamente los elementos internos */
+
 }
 
 .tarj-img {
-    width: 100%; /* Asegura que ocupe el ancho del contenedor */
-    height: auto; /* Asegura que mantenga su proporción */
+    width: 100%;
+    /* Asegura que ocupe el ancho del contenedor */
+    height: auto;
+    /* Asegura que mantenga su proporción */
     border-radius: .5em;
-    box-sizing: border-box; /* Asegura que el padding se incluya en el tamaño total */
-    object-fit: cover; /* Escala la imagen para cubrir el contenedor, recortando si es necesario */
+    box-sizing: border-box;
+    /* Asegura que el padding se incluya en el tamaño total */
+    object-fit: cover;
+    /* Escala la imagen para cubrir el contenedor, recortando si es necesario */
+    overflow: hidden;
+    /* Evita que el contenido sobresalga */
+    height: 50%;
 }
 
 .titulo-tarj {
-    margin-top: .5em;
-    margin-bottom: .5em;
-    font-weight: 800;
+    font-size: 1em;
+    max-width: 100%;
+    margin-top: .05em;
+    margin-bottom: 0;
+    font-weight: 600;
     color: var(--color-texto-blanco);
     text-transform: uppercase;
-    word-wrap: break-word; /* Permite que las palabras largas se rompan para ajustarse al contenedor */
-    overflow: hidden; /* Oculta cualquier desbordamiento */
-    text-overflow: ellipsis; /* Añade puntos suspensivos (...) si el texto es demasiado largo */
-    /* white-space: nowrap; Evita que el texto se envuelva en una nueva línea */
+    word-wrap: break-word;
+    /* Permite que las palabras largas se rompan para ajustarse al contenedor */
+    overflow: hidden;
+    /* Oculta cualquier desbordamiento */
+    text-overflow: ellipsis;
+    /* Añade puntos suspensivos (...) si el texto es demasiado largo */
+    white-space: nowrap;
+    /*Evita que el texto se envuelva en una nueva línea */
 }
 
-.tarj-descrip{
-    margin-top: .2rem;
-    margin-bottom: .2rem;
+.titulo-tarj:hover {
+    font-size: .8em;
+    overflow: none;
+    max-height: 100%;
+    min-width: 100%;
+    text-align: center;
+}
+
+.tarj-descrip {
+    font-weight: 400;
+    font-size: .75em;
+    margin-top: .08em;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    overflow: hidden;
+    /* Evita que el contenido sobresalga */
 }
 
 .tarj-precio {
-    margin-top: .5rem;
-    margin-bottom: .5rem;
+    margin-top: .05em;
+    margin-bottom: 0;
+    color: var(--color-blanco-claro);
+}
+
+.btn-agregar {
+    background-color: var(--color-blanco-gris);
+    border-radius: .5em;
+    border: 2px solid var(--color-texto-negro);
+    padding: .2em;
+    text-align: center;
+    font-weight: 500;
+    margin-top: 0;
+    margin: 0;
+
+    &:hover {
+        background-color: var(--color-verde-claro);
+        border: 3px solid var(--color-blanco-gris);
+        letter-spacing: 1px;
+        font-weight: 600;
+        color: var(--color-blanco-claro);
+
+    }
 }
 
 /*** NOSOTROS ***/
@@ -205,7 +283,10 @@ main {
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    margin-left: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: .2rem;
 }
 
 /* FOOTER */
@@ -232,7 +313,7 @@ footer {
     text-transform: uppercase;
 }
 
-.seguinos{
+.seguinos {
     font-size: .75em;
     margin-left: 1rem;
     color: #5c764b;
@@ -277,9 +358,15 @@ h4 {
 
 
 /*** Medias queries ***/
-@media (max-width: 500px) { /* pantallas menores a 500px */
+@media (max-width: 500px) {
+
+    /* pantallas menores a 500px */
     .titulo {
         display: none;
     }
-}
 
+    .titulo-tarj {
+        font-size: .75em;
+        width: 100%;
+    }
+}
