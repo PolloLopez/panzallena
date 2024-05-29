@@ -60,6 +60,8 @@ header {
 }
 
 /* Reglas globales para <li> */
+
+
 li {
     cursor: pointer;
     list-style: none;
@@ -67,12 +69,10 @@ li {
     border-radius: 0.21rem;
     border: solid 2px var(--color-verde-oscuro);
     padding: 0.25em 0.5em;
-    /* Aumentar el padding horizontal */
     font-size: .9em;
     text-align: center;
     transition: background-color 0.3s, border 0.3s;
-    /* Añadir transición para suavizar el hover */
-}
+    }
 
 li:hover {
     background-color: var(--color-verde-claro);
@@ -320,21 +320,77 @@ h4 {
 @media (max-width: 500px) {
 
     /* pantallas menores a 500px */
-    .titulo {
+.titulo {
         display: none;
     }
 
-    /* .titulo-tarj {
+/*    .titulo-tarj {
         font-size: .75em;
         width: 100%;
     } */
 }
 
-@media ((min-width: 250px) and (max-width: 400px)) {
+@media ((min-width: 250px) and (max-width: 600px)) {
     .productos {
         gap: 0.05em;
         border-radius: 0.1em;
-        padding: .2em;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
+        padding: .25em;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 2fr));
     }
+
+    .tarj-container {
+        padding: .25rem;
+        max-height: 30vh;
+        overflow: hidden;
+    }
+    
+    .tarj-index {
+        width: 100%;
+        padding: .25em;
+        border-radius: .3em;
+        min-height: 30%;
+    }
+    
+    .tarj-img {
+        width: 80%;
+        border-radius: .45em;
+        height: 45%;
+    }
+    
+    .titulo-tarj {
+        font-size: .75em;
+        max-width: 100%;
+        margin-top: .05em;
+        margin-bottom: 0;
+        font-weight: 400;
+    }
+    
+    .titulo-tarj:hover {
+        font-size: .8em;
+        overflow: none;
+        max-height: 100%;
+        min-width: 100%;
+        text-align: center;
+    }
+    
+    .tarj-descrip {
+        font-weight: 400;
+        font-size: .75em;
+        margin-top: .08em;
+    }
+    
+    .tarj-precio {
+        margin-top: .05em;
+    }
+    
+    .btn-agregar {
+        border-radius: .25em;
+        padding-inline: .25em;
+        letter-spacing: .25px;}
+
+        &:hover {
+            border: 2px solid var(--color-blanco-gris);
+            letter-spacing: 1px;
+            font-weight: 400;
+        }
 }
