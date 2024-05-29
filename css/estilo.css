@@ -105,51 +105,48 @@ main {
     color: var(--color-texto-negro);
 }
 
-/* TARJETAS INDEX nuestros productos*/
-
-
-/**** GPT ****/
-
-
+/*** TARJETAS INDEX nuestros productos***/
 /* Productos Section */
 .productos {
     display: grid;
     gap: 0.5em;
     background-color: var(--color-verde-sombra);
     border-radius: 0.5em;
-    padding: 1em;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 3fr));
+    padding: .5em;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 3fr));
     justify-content: center;
 }
 
 .tarj-container {
-    box-sizing: border-box;    /* Asegura que el padding se incluya en el tamaño total */
+    box-sizing: border-box;
+    /* Asegura que el padding se incluya en el tamaño total */
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 1rem;
-    max-height: 70vh;
-    overflow: hidden;   /* Evita que el contenido sobresalga */
+    padding: .5rem;
+    max-height: 50vh;
+    overflow: hidden;
+    /* Evita que el contenido sobresalga */
 }
 
-/*** Medias queries ***/
-
-
 .tarj-index {
-    width: 100%;    /* Asegura que ocupe todo el ancho del contenedor padre */
+    width: 100%;
+    /* Asegura que ocupe todo el ancho del contenedor padre */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 1em;
+    padding: .5em;
     border-radius: .5em;
     background-color: var(--color-verde-claro);
-    box-sizing: border-box;    /* Asegura que el padding se incluya en el tamaño total */
-    height: 100%;    /* Asegura que todas las tarjetas tengan el mismo tamaño */
-    min-height: 40%;    /*Alto mininmo */
+    box-sizing: border-box;
+    /* Asegura que el padding se incluya en el tamaño total */
+    height: 100%;
+    /* Asegura que todas las tarjetas tengan el mismo tamaño */
+    min-height: 40%;
+    /*Alto mininmo */
     position: relative;
     /* Para posicionar absolutamente los elementos internos */
-
 }
 
 .tarj-img {
@@ -164,7 +161,7 @@ main {
     /* Escala la imagen para cubrir el contenedor, recortando si es necesario */
     overflow: hidden;
     /* Evita que el contenido sobresalga */
-    height: 50%;
+    height: 45%;
 }
 
 .titulo-tarj {
@@ -173,6 +170,7 @@ main {
     margin-top: .05em;
     margin-bottom: 0;
     font-weight: 600;
+    text-align: center;
     color: var(--color-texto-blanco);
     text-transform: uppercase;
     word-wrap: break-word;
@@ -181,7 +179,7 @@ main {
     /* Oculta cualquier desbordamiento */
     text-overflow: ellipsis;
     /* Añade puntos suspensivos (...) si el texto es demasiado largo */
-    white-space: nowrap;
+    /* white-space: nowrap; */
     /*Evita que el texto se envuelva en una nueva línea */
 }
 
@@ -230,8 +228,6 @@ main {
 }
 
 /*** NOSOTROS ***/
-
-
 .sobreNosotros {
     margin-top: 1em;
 }
@@ -253,7 +249,7 @@ main {
     margin-bottom: .2rem;
 }
 
-/* FOOTER */
+/*** FOOTER ***/
 .logoWhatsapp {
     width: 3.5em;
     position: fixed;
@@ -328,28 +324,17 @@ h4 {
         display: none;
     }
 
-    .titulo-tarj {
+    /* .titulo-tarj {
         font-size: .75em;
         width: 100%;
-    }
+    } */
 }
 
-
-/* Responsive grid columns */
-/* @media (max-width: 1024px) {
+@media ((min-width: 250px) and (max-width: 400px)) {
     .productos {
-        grid-template-columns: repeat(3, 1fr);
+        gap: 0.05em;
+        border-radius: 0.1em;
+        padding: .2em;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
     }
 }
-
-@media (max-width: 768px) {
-    .productos {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 480px) {
-    .productos {
-        grid-template-columns: 1fr;
-    }
-} */
