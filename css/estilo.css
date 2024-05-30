@@ -72,7 +72,7 @@ li {
     font-size: .9em;
     text-align: center;
     transition: background-color 0.3s, border 0.3s;
-    }
+}
 
 li:hover {
     background-color: var(--color-verde-claro);
@@ -113,22 +113,22 @@ main {
     background-color: var(--color-verde-sombra);
     border-radius: 0.5em;
     padding: .5em;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 3fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 3fr));
+    /*repeat(auto-fit): Crea tantas columnas como sea posible que se ajusten al ancho del contenedor.
+    -minmax(150px, 5fr)-Cada col tendrá un ancho mín de 150 px y un ancho máx de 5 fr*/
     justify-content: center;
 }
 
 .tarj-container {
-    box-sizing: border-box;
-    /* Asegura que el padding se incluya en el tamaño total */
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 1.5em;
-    padding: .5rem;
-    max-height: 50vh;
+    padding: .025rem;
+    max-height: 100vh;
     overflow: hidden;
     /* Evita que el contenido sobresalga */
-    margin-bottom: 1em;
+    margin: 0;
 }
 
 .tarj-index {
@@ -139,91 +139,84 @@ main {
     justify-content: space-between;
     align-items: center;
     padding: .5em;
-    border-radius: .5em;
+    border-radius: .25em;
     background-color: var(--color-verde-claro);
     box-sizing: border-box;
     /* Asegura que el padding se incluya en el tamaño total */
-    height: 30vh;
+    height: 35vh;
     /* Asegura que todas las tarjetas tengan el mismo tamaño */
-    min-height: 30vh;
+    min-height: 35vh;
     /*Alto mininmo */
     position: relative;
-    /* Para posicionar absolutamente los elementos internos */
-    margin-top: .02em;
 }
 
 .tarj-img {
+    padding: .1em;
+    height: 20vh;
     width: 100%;
-    /* Asegura que ocupe el ancho del contenedor */
-    height: auto;
-    /* Asegura que mantenga su proporción */
-    border-radius: .5em;
+    /* Aseguran que ocupe el %100 del contenedor */
+    border-radius: .3em;
     box-sizing: border-box;
     /* Asegura que el padding se incluya en el tamaño total */
     object-fit: cover;
     /* Escala la imagen para cubrir el contenedor, recortando si es necesario */
     overflow: hidden;
     /* Evita que el contenido sobresalga */
-    height: 45%;
 }
 
 .titulo-tarj {
-    font-size: .75em;
-    min-height: .9em;
+    display: flex;
+    flex-direction: column;
+    font-size: .9em;
+    height: auto;
+    max-height: 100%;
+    overflow: none;
+    padding: .1em;
+    justify-content: center;
+    align-items: center;
     max-width: 100%;
-    min-width: 90%;
-    margin: .05em;
-    margin-left: .5em;
-    font-weight: 400;
+    min-width: 50%;
+    font-weight: 500;
     text-align: center;
+    letter-spacing: .09em;
     color: var(--color-texto-blanco);
     text-transform: uppercase;
     word-wrap: break-word;
+    margin: 0;
     /* Permite que las palabras largas se rompan para ajustarse al contenedor */
-    overflow: hidden;
-    /* Oculta cualquier desbordamiento */
-    text-overflow: ellipsis;
-    /* Añade puntos suspensivos (...) si el texto es demasiado largo */
-    white-space: nowrap;     /*Evita que el texto se envuelva en una nueva línea */
-}
-
-.titulo-tarj:hover {
-    font-size: .8em;
-    overflow: none;
-    max-height: 100%;
-    min-width: 100%;
-    text-align: center;
 }
 
 .tarj-descrip {
-    min-height: 30%;
-    max-height: 100%;
-    font-weight: 400;
+    height: auto;
+    max-height: 8vh;
+    font-weight: 500;
     font-size: .75em;
-    margin-left: .08em;
+    margin: 0;
     text-transform: uppercase;
-    margin-bottom: .01em;
-    margin-top: .01em;
     overflow: hidden;
     /* Evita que el contenido sobresalga */
 }
 
 .tarj-precio {
-    font-size: .5em;
-    margin-top: .05em;
-    margin-bottom: 0;
+    font-size: 1em;
+    margin: .05em;
+    font-weight: 450;
+    letter-spacing: .09em;
     color: var(--color-blanco-claro);
+    justify-content: center;
 }
 
 .btn-agregar {
     background-color: var(--color-blanco-gris);
     border-radius: .5em;
     border: 2px solid var(--color-texto-negro);
+    padding: .2em;
     padding-inline: .5em;
-    letter-spacing: .5px;
+    letter-spacing: .05em;
     text-align: center;
     font-weight: 500;
-    margin: 0;
+    margin-bottom: .3em;
+    
 
     &:hover {
         background-color: var(--color-verde-claro);
@@ -327,17 +320,17 @@ h4 {
 @media (max-width: 500px) {
 
     /* pantallas menores a 500px */
-.titulo {
+    .titulo {
         display: none;
     }
 
-/*    .titulo-tarj {
+    /*    .titulo-tarj {
         font-size: .75em;
         width: 100%;
     } */
 }
 
-@media ((min-width: 250px) and (max-width: 600px)) {
+/* @media ((min-width: 250px) and (max-width: 600px)) {
     .productos {
         gap: .2em;
         border-radius: 0.1em;
@@ -350,7 +343,7 @@ h4 {
         margin: 0.5em;
 
     }
-    
+
     .tarj-index {
         width: 100%;
         padding: .025em;
@@ -359,15 +352,15 @@ h4 {
         flex-direction: column;
         justify-content: space-between;
         height: 80%;
-        
+
 
     }/*
         width: 100%;
         padding: .025em;
         border-radius: .3em;
-        min-height: 50%; */
+        min-height: 50%;
     }
-    
+
     .tarj-img {
         width: 90%;
         border-radius: .45em;
@@ -375,7 +368,7 @@ h4 {
         padding: 0;
         margin: .5em;
     }
-    
+
     .titulo-tarj {
         font-size: .8em;
         max-height: .8em;
@@ -386,7 +379,7 @@ h4 {
         margin-left: 1em;
         margin-right: .8em;
     }
-    
+
     .titulo-tarj:hover {
         font-size: .8em;
         overflow: none;
@@ -396,7 +389,7 @@ h4 {
         margin-left: .5em;
         margin-right: .5em;
     }
-    
+
     .tarj-descrip {
         font-weight: 400;
         font-size: .75em;
@@ -405,12 +398,12 @@ h4 {
         margin-left: .25em;
         max-height:min-content;
     }
-    
+
     .tarj-precio {
         margin-top: .005em;
         margin-bottom: 0.5em;
     }
-    
+
     .btn-agregar {
         border-radius: .05em;
         padding: .005em;
@@ -420,10 +413,10 @@ h4 {
         margin-bottom: .2em;
         position: absolute;
         bottom: 0px;
-        
+
     }
 
         &:hover {
             border: 1px solid var(--color-blanco-gris);
         }
-
+ */
