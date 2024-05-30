@@ -37,9 +37,7 @@ body {
 /* header */
 header {
     margin: 0.5rem;
-    /* background-color: var(--color-blanco-gris); */
     height: auto;
-    /* border: 1px solid var(--color-verde-claro); */
 }
 
 .imgLogo {
@@ -56,7 +54,6 @@ header {
     display: flex;
     justify-content: flex-end;
     gap: .5em;
-    /* Ajusta el espaciado entre los elementos */
 }
 
 /* Reglas globales para <li> */
@@ -84,11 +81,8 @@ li a {
     color: var(--color-verde-oscuro);
     text-decoration: none;
     display: block;
-    /* Asegurar que el enlace ocupe todo el li */
     padding: 0.25em 0.5em;
-    /* Aumentar el padding del enlace */
     transition: color 0.3s;
-    /* Añadir transición para suavizar el hover */
 }
 
 li a:hover {
@@ -108,90 +102,82 @@ main {
 /*** TARJETAS INDEX nuestros productos***/
 /* Productos Section */
 .productos {
+    height: 900%;
     display: grid;
     gap: .5em;
     background-color: var(--color-verde-sombra);
     border-radius: 0.5em;
     padding: .5em;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 3fr));
-    /*repeat(auto-fit): Crea tantas columnas como sea posible que se ajusten al ancho del contenedor.
-    -minmax(150px, 5fr)-Cada col tendrá un ancho mín de 150 px y un ancho máx de 5 fr*/
+    grid-template-columns: repeat(auto-fit, minmax(150px, 3fr));
     justify-content: center;
+
 }
 
 .tarj-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5em;
-    padding: .025rem;
-    max-height: 100vh;
+    padding: .25rem;
+    min-height: 30%;
+    max-height: auto;
     overflow: hidden;
-    /* Evita que el contenido sobresalga */
-    margin: 0;
+    margin: .0;
 }
 
 .tarj-index {
-    width: 100%;
-    /* Asegura que ocupe todo el ancho del contenedor padre */
+    width: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: .5em;
+    justify-content: baseline;
+    align-items: top;
+    padding: .3em;
+    margin: 0;
     border-radius: .25em;
     background-color: var(--color-verde-claro);
     box-sizing: border-box;
-    /* Asegura que el padding se incluya en el tamaño total */
-    height: 35vh;
-    /* Asegura que todas las tarjetas tengan el mismo tamaño */
-    min-height: 35vh;
-    /*Alto mininmo */
     position: relative;
 }
 
 .tarj-img {
-    padding: .1em;
-    height: 20vh;
+    padding: .5vh;
+    margin: 0;
+    height: 40%;
     width: 100%;
-    /* Aseguran que ocupe el %100 del contenedor */
-    border-radius: .3em;
+    border-radius: 1em;
+    align-items: center;
+    justify-content: center;
     box-sizing: border-box;
-    /* Asegura que el padding se incluya en el tamaño total */
     object-fit: cover;
-    /* Escala la imagen para cubrir el contenedor, recortando si es necesario */
-    overflow: hidden;
-    /* Evita que el contenido sobresalga */
 }
 
+/*overflow: hidden;
+     Evita que el contenido sobresalga */
+
 .titulo-tarj {
-    display: flex;
-    flex-direction: column;
-    font-size: .9em;
-    height: auto;
-    max-height: 100%;
-    overflow: none;
-    padding: .1em;
-    justify-content: center;
-    align-items: center;
+    font-size: 1em;
     max-width: 100%;
-    min-width: 50%;
-    font-weight: 500;
+    height: auto;
+    max-height: 2.5em;
+    padding: .25em;
+    justify-content: center; /*alinea en vertical*/
+    align-items: center;
+    font-weight: 400;
     text-align: center;
-    letter-spacing: .09em;
+    letter-spacing: .05em;
     color: var(--color-texto-blanco);
     text-transform: uppercase;
     word-wrap: break-word;
     margin: 0;
-    /* Permite que las palabras largas se rompan para ajustarse al contenedor */
 }
 
 .tarj-descrip {
+    padding: .5em;
     height: auto;
-    max-height: 8vh;
+    max-height: 30%;
     font-weight: 500;
     font-size: .75em;
-    margin: 0;
+    margin-top: .5em;
+    justify-content: center;
+    align-content: center;
     text-transform: uppercase;
     overflow: hidden;
     /* Evita que el contenido sobresalga */
@@ -199,11 +185,13 @@ main {
 
 .tarj-precio {
     font-size: 1em;
-    margin: .05em;
-    font-weight: 450;
+    padding: .01em;
+    margin: 0.25em;
+    font-weight: 500;
     letter-spacing: .09em;
     color: var(--color-blanco-claro);
     justify-content: center;
+    align-self: center; /*alinea en el eje vertical*/
 }
 
 .btn-agregar {
@@ -211,19 +199,21 @@ main {
     border-radius: .5em;
     border: 2px solid var(--color-texto-negro);
     padding: .2em;
-    padding-inline: .5em;
-    letter-spacing: .05em;
-    text-align: center;
+    letter-spacing: .005em;
     font-weight: 500;
-    margin-bottom: .3em;
-    
+    position: absolute; /*si el padre tiene position:relative, esto deja que se posicione al final*/
+    bottom: 0;
+    width: 80%;
+    align-self: center;
+    margin-bottom: .5em;
+
 
     &:hover {
-        background-color: var(--color-verde-claro);
-        border: 3px solid var(--color-blanco-gris);
+        background-color: var(--color-verde-sombra);
+        border: 3px solid var(--color-texto-negro);
         letter-spacing: 0.025em;
         font-weight: 400;
-        color: var(--color-blanco-claro);
+        color: var(--color-texto-negro);
     }
 }
 
@@ -251,7 +241,7 @@ main {
 
 /*** FOOTER ***/
 .logoWhatsapp {
-    width: 3.5em;
+    width: 2.5em;
     position: fixed;
     right: .5em;
     bottom: 1em;
@@ -260,8 +250,8 @@ main {
 }
 
 .logoWhatsapp:hover {
-    width: 4.5em;
-    border-radius: 3em;
+    width: 3.5em;
+    border-radius: 2em;
     border: 3px solid var(--color-verde-claro);
 }
 
@@ -316,6 +306,9 @@ h4 {
     color: var(--color-verde-oscuro);
 }
 
+h1{
+    font-size: 1.5em;
+}
 /*** Medias queries ***/
 @media (max-width: 500px) {
 
