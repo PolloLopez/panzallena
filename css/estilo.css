@@ -99,10 +99,14 @@ main {
     color: var(--color-texto-negro);
 }
 
+.contenedorProductos {
+    position: relative;
+}
+
 /*** TARJETAS INDEX nuestros productos***/
 /* Productos Section */
 .productos {
-    height: 900%;
+    height: 90%;
     display: grid;
     gap: .5em;
     background-color: var(--color-verde-sombra);
@@ -116,20 +120,21 @@ main {
 .tarj-container {
     display: flex;
     padding: .25rem;
-    min-height: 30%;
-    max-height: auto;
+    height: auto;
+    max-height: 50vh;
     overflow: hidden;
     margin: .0;
 }
 
 .tarj-index {
     width: 100vh;
-    height: auto;
+    max-height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: baseline;
-    align-items: top;
-    padding: .3em;
+    justify-content: center;
+    /*justify-content define cómo se distribuyen los elementos a lo largo del eje principal del contenedor flexible. El eje principal puede ser horizontal o vertica*/
+    align-items: center;
+    padding: .5em;
     margin: 0;
     border-radius: .25em;
     background-color: var(--color-verde-claro);
@@ -140,7 +145,7 @@ main {
 .tarj-img {
     padding: .5vh;
     margin: 0;
-    height: 40%;
+    height: 8em;
     width: 100%;
     border-radius: 1em;
     align-items: center;
@@ -153,67 +158,72 @@ main {
      Evita que el contenido sobresalga */
 
 .titulo-tarj {
+    display: flex;
+    flex-direction: column;
     font-size: 1em;
-    max-width: 100%;
-    height: auto;
-    max-height: 2.5em;
-    padding: .25em;
-    justify-content: center; /*alinea en vertical*/
+    width: auto;
+    padding: .02em;
+    margin: .05em;
+    justify-content: center;
+    /*alinea en vertical*/
     align-items: center;
     font-weight: 400;
     text-align: center;
     letter-spacing: .05em;
     color: var(--color-texto-blanco);
     text-transform: uppercase;
-    word-wrap: break-word;
-    margin: 0;
+    /* word-wrap: break-word; */
+    overflow: hidden;
 }
 
 .tarj-descrip {
-    padding: .5em;
+    display: flex;
+    padding: .02em;
+    margin: 0;
     height: auto;
-    max-height: 30%;
     font-weight: 500;
     font-size: .75em;
-    margin-top: .5em;
     justify-content: center;
-    align-content: center;
     text-transform: uppercase;
     overflow: hidden;
     /* Evita que el contenido sobresalga */
+    text-align: center;
 }
 
 .tarj-precio {
     font-size: 1em;
-    padding: .01em;
-    margin: 0.25em;
+    margin: 0.05em;
     font-weight: 500;
     letter-spacing: .09em;
     color: var(--color-blanco-claro);
-    justify-content: center;
-    align-self: center; /*alinea en el eje vertical*/
+    margin-bottom: .5em;
+    position: static;
+    ;
+    align-self: center;
+    /*alinea en el eje vertical*/
+    margin-top: auto;
+    /* Empuja el elemento al final */
 }
 
 .btn-agregar {
     background-color: var(--color-blanco-gris);
     border-radius: .5em;
-    border: 2px solid var(--color-texto-negro);
     padding: .2em;
+    padding-inline: .5em;
     letter-spacing: .005em;
     font-weight: 500;
-    position: absolute; /*si el padre tiene position:relative, esto deja que se posicione al final*/
     bottom: 0;
-    width: 80%;
+    width: auto;
     align-self: center;
     margin-bottom: .5em;
 
 
     &:hover {
-        background-color: var(--color-verde-sombra);
         border: 3px solid var(--color-texto-negro);
         letter-spacing: 0.025em;
         font-weight: 400;
         color: var(--color-texto-negro);
+        padding: 0;
     }
 }
 
@@ -233,11 +243,22 @@ main {
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     margin-left: 1rem;
     margin-top: 1.5rem;
     margin-bottom: .2rem;
+    position: -webkit-sticky;
+    /* Para navegadores basados en WebKit */
+    position: sticky;
+    top: 0;
+    background: var(--color-blanco-gris);
+    z-index: 1;
+    /* Asegúrate de que el encabezado se mantenga en la parte superior */
+    padding: 10px 0;
+    margin: 0;
+    /* Asegúrate de que no haya márgenes adicionales */
 }
+
 
 /*** FOOTER ***/
 .logoWhatsapp {
@@ -306,9 +327,10 @@ h4 {
     color: var(--color-verde-oscuro);
 }
 
-h1{
+h1 {
     font-size: 1.5em;
 }
+
 /*** Medias queries ***/
 @media (max-width: 500px) {
 
