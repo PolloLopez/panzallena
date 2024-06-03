@@ -38,10 +38,19 @@ body {
 header {
     margin: 0.5rem;
     height: auto;
+    padding-inline: .5em;
 }
 
 .imgLogo {
     height: 5em;
+    margin: auto;
+    padding-inline: .5em;
+}
+
+.titulo {
+    font-size: 2em;
+    padding: .25em;
+    color: var(--color-texto-negro);
     margin: auto;
 }
 
@@ -50,14 +59,25 @@ header {
     margin-top: 0;
 }
 
+/* Menú de navegación */
 .menuNav {
     display: flex;
     justify-content: flex-end;
     gap: .5em;
 }
 
-/* Reglas globales para <li> */
+/* Estilo para <li> en el menú de navegación */
+.menuNav {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos */
+}
 
+.menuNav li {
+    flex: 0 0 48%; /* Los elementos ocupan el 48% del ancho del contenedor */
+    margin-bottom: 0.5em; /* Espacio entre los elementos en la parte inferior */
+}
+/* Reglas globales para <li> */
 
 li {
     cursor: pointer;
@@ -101,6 +121,7 @@ main {
 
 .contenedorProductos {
     position: relative;
+    padding: 1em;
 }
 
 /*** TARJETAS INDEX nuestros productos***/
@@ -154,9 +175,6 @@ main {
     object-fit: cover;
 }
 
-/*overflow: hidden;
-     Evita que el contenido sobresalga */
-
 .titulo-tarj {
     display: flex;
     flex-direction: column;
@@ -180,7 +198,8 @@ main {
     display: flex;
     padding: .02em;
     margin: 0;
-    height: auto;
+    min-height: 10%;
+    max-height: auto;
     font-weight: 500;
     font-size: .75em;
     justify-content: center;
@@ -240,17 +259,14 @@ main {
 }
 
 .titulos {
+    border: 2px solid var(--color-verde-oscuro);
     text-transform: uppercase;
+    font-size: 2em;
     display: flex;
+    top: 0;
     flex-direction: column;
     align-items: center;
-    margin-left: 1rem;
-    margin-top: 1.5rem;
-    margin-bottom: .2rem;
-    position: -webkit-sticky;
-    /* Para navegadores basados en WebKit */
     position: sticky;
-    top: 0;
     background: var(--color-blanco-gris);
     z-index: 1;
     /* Asegúrate de que el encabezado se mantenga en la parte superior */
@@ -268,6 +284,7 @@ main {
     bottom: 1em;
     transition: width 0.3s, border 0.3s;
     margin: .5em;
+    z-index: 1000; /* Asegura que el logo esté en la parte superior */
 }
 
 .logoWhatsapp:hover {
@@ -288,7 +305,7 @@ footer {
 .seguinos {
     font-size: .75em;
     margin-left: 1rem;
-    color: #5c764b;
+    color: var(--color-texto-negro);
 }
 
 footer p {
@@ -320,10 +337,12 @@ footer p {
     display: none;
 }
 
-h1,
+
 h2,
 h3,
-h4 {
+h4,
+h5,
+h6 {
     color: var(--color-verde-oscuro);
 }
 
@@ -332,106 +351,53 @@ h1 {
 }
 
 /*** Medias queries ***/
-@media (max-width: 500px) {
+/* 
+@media (max-width: 550px) {
+    .btn-agregar{
+        padding-inline: 0;
+    }
+} */
+
+@media (max-width: 300px) {
+    .nav-menu {
+        display: none;
+        /* Esconder menú de navegación */
+    }
+    
+}
+@media (max-width: 400px) {
 
     /* pantallas menores a 500px */
     .titulo {
         display: none;
     }
-
-    /*    .titulo-tarj {
-        font-size: .75em;
-        width: 100%;
-    } */
 }
 
-/* @media ((min-width: 250px) and (max-width: 600px)) {
-    .productos {
-        gap: .2em;
-        border-radius: 0.1em;
-        padding: .05em;
-        grid-template-columns: repeat(auto-fit, minmax(130px, 2fr));
+/* Dispositivos pequeños (teléfonos en modo retrato) */
+@media (max-width: 480px) {
+    .contenedorProductos {
+        padding: .5em;
     }
 
-    .tarj-container {
-        padding: .09em;
-        margin: 0.5em;
-
+    .titulo {
+        font-size: 1.5em;
     }
 
-    .tarj-index {
-        width: 100%;
-        padding: .025em;
-        border-radius: .3em;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        height: 80%;
-
-
-    }/*
-        width: 100%;
-        padding: .025em;
-        border-radius: .3em;
-        min-height: 50%;
+    .logoWhatsapp {
+        right: .25em;
+        bottom: .5em;
     }
+}
 
-    .tarj-img {
-        width: 90%;
-        border-radius: .45em;
-        min-height: 45%;
-        padding: 0;
-        margin: .5em;
+@media (max-width: 380px) {
+    .titulos {
+        font-size: 1.5em;
     }
+}
 
-    .titulo-tarj {
-        font-size: .8em;
-        max-height: .8em;
-        max-width: 100%;
-        margin-top: .05em;
-        margin-bottom: .05em;
-        font-weight: 500;
-        margin-left: 1em;
-        margin-right: .8em;
+
+/* @media (max-width: 600px) {
+    .navbar-collapse {
+        display: block !important; /* Fuerza el menú a estar siempre abierto 
     }
-
-    .titulo-tarj:hover {
-        font-size: .8em;
-        overflow: none;
-        max-height: 100%;
-        min-width: 100%;
-        text-align: center;
-        margin-left: .5em;
-        margin-right: .5em;
-    }
-
-    .tarj-descrip {
-        font-weight: 400;
-        font-size: .75em;
-        margin-top:.5em;
-        margin-bottom: .5em;
-        margin-left: .25em;
-        max-height:min-content;
-    }
-
-    .tarj-precio {
-        margin-top: .005em;
-        margin-bottom: 0.5em;
-    }
-
-    .btn-agregar {
-        border-radius: .05em;
-        padding: .005em;
-        font-size: small;
-        letter-spacing: .002em;
-        margin-top: 1em;
-        margin-bottom: .2em;
-        position: absolute;
-        bottom: 0px;
-
-    }
-
-        &:hover {
-            border: 1px solid var(--color-blanco-gris);
-        }
- */
+} */
