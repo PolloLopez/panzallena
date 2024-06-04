@@ -55,22 +55,19 @@ header {
 }
 
 .encabezado {
-    margin-left: 0.5em;
-    margin-top: 0;
+    margin-left: .5em;
+    padding: .25em;
 }
 
 /* Menú de navegación */
 .menuNav {
-    display: flex;
-    justify-content: flex-end;
-    gap: .5em;
-}
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Tres columnas de igual tamaño */
+    column-gap: 1em;
+    row-gap: .5em;
+    padding-inline: 1em;
+    justify-content: space-between;
 
-/* Estilo para <li> en el menú de navegación */
-.menuNav {
-    display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea */
-    justify-content: space-between; /* Distribuye el espacio entre los elementos */
 }
 
 .menuNav li {
@@ -103,6 +100,7 @@ li a {
     display: block;
     padding: 0.25em 0.5em;
     transition: color 0.3s;
+    text-transform:uppercase;
 }
 
 li a:hover {
@@ -116,12 +114,14 @@ navbar-toggler {
 /* main */
 main {
     margin: .5em;
+    margin-top: 0;
     color: var(--color-texto-negro);
 }
 
 .contenedorProductos {
     position: relative;
     padding: 1em;
+    padding-top: .5em;
 }
 
 /*** TARJETAS INDEX nuestros productos***/
@@ -393,11 +393,23 @@ h1 {
     .titulos {
         font-size: 1.5em;
     }
+
+    .menuNav {
+        grid-template-columns: repeat(1, 1fr); 
 }
 
+    .menuNav li {
+    font-size: 1em;
+    text-align: center;
+}
 
-/* @media (max-width: 600px) {
-    .navbar-collapse {
-        display: block !important; /* Fuerza el menú a estar siempre abierto 
-    }
-} */
+li:hover {
+    background-color: var(--color-verde-claro);
+    border: 2px solid var(--color-texto-negro);
+}
+
+/* Estilo para enlaces dentro de <li> */
+li a {
+    padding: .25em;
+}
+}
