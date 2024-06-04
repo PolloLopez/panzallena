@@ -4,6 +4,7 @@
         "precio": 1000,
         "descripcion": "Bondiola al malbec cocida con hiervas; masa con tinta de remolacha",
         "img": "./img/pastas1.png",
+        "cantidad": "12 unidades",
         "categoria": "RAVIOLONES"
     },
     {
@@ -11,6 +12,7 @@
         "precio": 2000,
         "descripcion": "Roast beaf al malbec cocida con hiervas; masa con tinta de remolacha.al malbec cocida con hiervas.",
         "img": "./img/pastas12.png",
+        "cantidad": "12 unidades",
         "categoria": "RAVIOLONES"
     },
     {
@@ -18,6 +20,7 @@
         "precio": 3000,
         "descripcion": " con hiervas; masa con tinta de remolacha",
         "img": "./img/pastas3.png",
+        "cantidad": "12 unidades",
         "categoria": "RAVIOLONES"
     },
     {
@@ -25,6 +28,7 @@
         "precio": 4000,
         "descripcion": "Basa con tinta de remolacha",
         "img": "./img/pastas4.png",
+        "cantidad": "12 unidades",
         "categoria": "RAVIOLONES"
     },
     {
@@ -32,6 +36,7 @@
         "precio": 5000,
         "descripcion": "Bondiola al malbec cocida con hiervas; de remolacha",
         "img": "./img/pastas5.png",
+        "cantidad": "12 unidades",
         "categoria": "RAVIOLONES"
     },
     {
@@ -39,6 +44,7 @@
         "precio": 6000,
         "descripcion": "cocida con hiervas; masa con tinta de remolacha",
         "img": "./img/pastas18.png",
+        "cantidad": "12 unidades",
         "categoria": "RAVIOLONES"
     },
     {
@@ -46,6 +52,7 @@
         "precio": 1000,
         "descripcion": "Bondiola al malbec cocida con hiervas; masa con tinta de remolacha",
         "img": "./img/pastas7.png",
+        "cantidad": "12 unidades",
         "categoria": "SORRENTINOS"
     },
     {
@@ -53,6 +60,7 @@
         "precio": 1000,
         "descripcion": "Bondiola al malbec cocida con hiervas; masa con tinta de remolacha",
         "img": "./img/pastas8.png",
+        "cantidad": "12 unidades",
         "categoria": "SORRENTINOS"
     },
     {
@@ -60,6 +68,7 @@
         "precio": 1000,
         "descripcion": "Roque - sardo - reggianito - pategras - briecocida con hiervas; masa con tinta de remolacha",
         "img": "./img/pastas11.png",
+        "cantidad": "12 unidades",
         "categoria": "SORRENTINOS"
     },
     {
@@ -67,6 +76,7 @@
         "precio": 2000,
         "descripcion": "eso que se parece una batata; masa con tinta de remolacha.Bondiola al malbec cocida con hiervas.",
         "img": "./img/pastas12.png",
+        "cantidad": "12 unidades",
         "categoria": "SORRENTINOS"
     },
     {
@@ -74,6 +84,7 @@
         "precio": 2000,
         "descripcion": "masa con tinta de remolacha. Bondiola al malbec cocida con hiervas.",
         "img": "./img/pastas13.png",
+        "cantidad": "12 unidades",
         "categoria": "SORRENTINOS"
     },
     {
@@ -81,6 +92,7 @@
         "precio": 3100,
         "descripcion": " con hiervas; masa con tinta de remolacha",
         "img": "./img/pastas14.png",
+        "cantidad": "12 unidades",
         "categoria": "CAPELETTIS"
     },
     {
@@ -88,6 +100,7 @@
         "precio": 3000,
         "descripcion": " con hiervas;e remolacha",
         "img": "./img/pastas15.png",
+        "cantidad": "12 unidades",
         "categoria": "CAPELETTIS"
     },
     {
@@ -95,6 +108,7 @@
         "precio": 3000,
         "descripcion": " con hiervas; masa con tinta de remolacha",
         "img": "./img/pastas16.png",
+        "cantidad":"1 unidad",
         "categoria": "CANELONES"
     },
     {
@@ -102,6 +116,7 @@
         "precio": 3000,
         "descripcion": " con hiervas; masa con tinta de remolacha",
         "img": "./img/pastas17.png",
+        "cantidad": "500 gr",
         "categoria": "TALLARINES"
     },
     {
@@ -109,6 +124,7 @@
         "precio": 3000,
         "descripcion": " con hiervas; masa con tinta de remolacha",
         "img": "./img/pastas18.png",
+        "cantidad": "500 gr",
         "categoria": "TALLARINES"
     },
     {
@@ -116,6 +132,7 @@
         "precio": 3000,
         "descripcion": " con hiervas; masa con tinta de remolacha",
         "img": "./img/pastas19.png",
+        "cantidad": "10 unidades",
         "categoria": "NOCONES"
     },
     {
@@ -123,6 +140,7 @@
         "precio": 3000,
         "descripcion": " con hiervas; masa con tinta de remolacha",
         "img": "./img/pastas20.png",
+        "cantidad":  "10 unidades",
         "categoria": "NOCONES"
     },
     {
@@ -130,6 +148,7 @@
         "precio": 3000,
         "descripcion": " con hiervas; masa con tinta de remolacha",
         "img": "./img/pastas21.png",
+        "cantidad": "500 gr",
         "categoria": "LASAGNA"
     },
     {
@@ -137,6 +156,7 @@
         "precio": 3000,
         "descripcion": "ajo, albahaca y nuez",
         "img": "./img/pastas22.png",
+        "cantidad": "500 gr",
         "categoria": "SALSAS"
     },
     {
@@ -144,6 +164,7 @@
         "precio": 3000,
         "descripcion": " con hiervas; masa con tinta de remolacha",
         "img": "./img/pastas22.png",
+        "cantidad": "500 gr",
         "categoria": "SALSAS"
     },
     {
@@ -151,6 +172,7 @@
         "precio": 3000,
         "descripcion": " con hiervas; masa co tinta de remolacha",
         "img": "./img/pastas23.png",
+        "cantidad": "500 gr",
         "categoria": "SALSAS"
     },
     {
@@ -158,6 +180,7 @@
         "precio": 3000,
         "descripcion": " con hiervas; masa con tinta de remolacha",
         "img": "./img/pastas23.png",
+        "cantidad": "500 gr",
         "categoria": "SALSAS"
     },
     {
@@ -165,6 +188,7 @@
         "precio": 3000,
         "descripcion": "alMondigas de carne picadiña",
         "img": "./img/pastas23.png",
+        "cantidad": "500 gr",
         "categoria": "SALSAS"
     },
     {
@@ -172,6 +196,7 @@
         "precio": 3000,
         "descripcion": " con hiervas; masa con tinta de remolacha",
         "img": "./img/pastas24.png",
+        "cantidad": "250 gr",
         "categoria": "POSTRES"
     },
     {
@@ -179,6 +204,7 @@
         "precio": 3000,
         "descripcion": " con hiervas; masa con tinta de remolacha",
         "img": "./img/pastas12.png",
+        "cantidad": "250 gr",
         "categoria": "POSTRES"
     },
     {
@@ -186,6 +212,7 @@
         "precio": 3000,
         "descripcion": " con hiervas; masa con tinta remolacha",
         "img": "./img/pastas25.png",
+        "cantidad": "250 gr",
         "categoria": "POSTRES"
     }
 ]

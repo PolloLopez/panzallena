@@ -124,6 +124,32 @@ main {
     padding-top: .5em;
 }
 
+.titulos {
+    border: 2px solid var(--color-verde-oscuro);
+    text-transform: uppercase;
+    font-size: 2em;
+    display: flex;
+    top: 0;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    background: var(--color-blanco-gris);
+    z-index: 1;
+    /* Asegúrate de que el encabezado se mantenga en la parte superior */
+    padding: 10px 0;
+    margin: 0;
+    /* Asegúrate de que no haya márgenes adicionales */
+}
+
+.porcion {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    align-items: center;
+    color: var(--color-verde-oscuro);
+    font-size: .75em;
+    }
+
 /*** TARJETAS INDEX nuestros productos***/
 /* Productos Section */
 .productos {
@@ -135,7 +161,6 @@ main {
     padding: .5em;
     grid-template-columns: repeat(auto-fit, minmax(150px, 3fr));
     justify-content: center;
-
 }
 
 .tarj-container {
@@ -215,7 +240,7 @@ main {
     font-weight: 500;
     letter-spacing: .09em;
     color: var(--color-blanco-claro);
-    margin-bottom: .5em;
+    margin-bottom: .02em;
     position: static;
     ;
     align-self: center;
@@ -224,8 +249,15 @@ main {
     /* Empuja el elemento al final */
 }
 
-.btn-agregar {
+.tarj-cant {
+    font-size: .75em;
+    padding: 0;
+    margin: 0;
+}
+
+.producto-agregar {
     background-color: var(--color-blanco-gris);
+    border: 1px solid var(--color-texto-negro);
     border-radius: .5em;
     padding: .2em;
     padding-inline: .5em;
@@ -238,11 +270,9 @@ main {
 
 
     &:hover {
-        border: 3px solid var(--color-texto-negro);
-        letter-spacing: 0.025em;
-        font-weight: 400;
-        color: var(--color-texto-negro);
-        padding: 0;
+        background-color: var(--color-verde-claro);
+        border: 1px solid var(--color-texto-blanco);
+        color: var(--color-texto-blanco);
     }
 }
 
@@ -257,24 +287,6 @@ main {
     margin: 1rem;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', Verdana, sans-serif;
 }
-
-.titulos {
-    border: 2px solid var(--color-verde-oscuro);
-    text-transform: uppercase;
-    font-size: 2em;
-    display: flex;
-    top: 0;
-    flex-direction: column;
-    align-items: center;
-    position: sticky;
-    background: var(--color-blanco-gris);
-    z-index: 1;
-    /* Asegúrate de que el encabezado se mantenga en la parte superior */
-    padding: 10px 0;
-    margin: 0;
-    /* Asegúrate de que no haya márgenes adicionales */
-}
-
 
 /*** FOOTER ***/
 .logoWhatsapp {
@@ -351,12 +363,19 @@ h1 {
 }
 
 /*** Medias queries ***/
-/* 
-@media (max-width: 550px) {
-    .btn-agregar{
-        padding-inline: 0;
+
+@media (min-width: 680px) {
+        .menuNav {
+        grid-template-columns: repeat(3, 1fr); 
+}
     }
-} */
+
+    @media (min-width: 1430px) {
+        .menuNav {
+        grid-template-columns: repeat(6, 1fr); 
+}
+    }
+
 
 @media (max-width: 300px) {
     .nav-menu {
