@@ -276,6 +276,18 @@ main {
     }
 }
 
+/*** carrito ***/
+.carrito-tienda {
+    background-color: var(--color-verde-sombra);
+    border-radius: .5em;
+}
+
+.carrito-tienda h3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-texto-negro);
+}
 /*** NOSOTROS ***/
 .sobreNosotros {
     margin-top: 1em;
