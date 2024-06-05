@@ -62,7 +62,8 @@ header {
 /* Menú de navegación */
 .menuNav {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Tres columnas de igual tamaño */
+    grid-template-columns: repeat(2, 1fr);
+    /* Tres columnas de igual tamaño */
     column-gap: 1em;
     row-gap: .5em;
     padding-inline: 1em;
@@ -71,9 +72,12 @@ header {
 }
 
 .menuNav li {
-    flex: 0 0 48%; /* Los elementos ocupan el 48% del ancho del contenedor */
-    margin-bottom: 0.5em; /* Espacio entre los elementos en la parte inferior */
+    flex: 0 0 48%;
+    /* Los elementos ocupan el 48% del ancho del contenedor */
+    margin-bottom: 0.5em;
+    /* Espacio entre los elementos en la parte inferior */
 }
+
 /* Reglas globales para <li> */
 
 li {
@@ -100,7 +104,7 @@ li a {
     display: block;
     padding: 0.25em 0.5em;
     transition: color 0.3s;
-    text-transform:uppercase;
+    text-transform: uppercase;
 }
 
 li a:hover {
@@ -148,7 +152,7 @@ main {
     align-items: center;
     color: var(--color-verde-oscuro);
     font-size: .75em;
-    }
+}
 
 /*** TARJETAS INDEX nuestros productos***/
 /* Productos Section */
@@ -159,7 +163,7 @@ main {
     background-color: var(--color-verde-sombra);
     border-radius: 0.5em;
     padding: .5em;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 3fr));
+    grid-template-columns: repeat(auto-fit, minmax(160px, 3fr));
     justify-content: center;
 }
 
@@ -191,13 +195,14 @@ main {
 .tarj-img {
     padding: .5vh;
     margin: 0;
-    height: 8em;
+    height: 25vh;
     width: 100%;
     border-radius: 1em;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
     object-fit: cover;
+    overflow: hidden;
 }
 
 .titulo-tarj {
@@ -207,31 +212,35 @@ main {
     width: auto;
     padding: .02em;
     margin: .05em;
-    justify-content: center;
+    /* justify-content: center; */
     /*alinea en vertical*/
     align-items: center;
     font-weight: 400;
     text-align: center;
-    letter-spacing: .05em;
+    /* letter-spacing: .05em; */
     color: var(--color-texto-blanco);
     text-transform: uppercase;
     /* word-wrap: break-word; */
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .tarj-descrip {
     display: flex;
+    align-items: center;
+    /* Distribuye los elementos de manera centrada verticalmente */
     padding: .02em;
     margin: 0;
-    min-height: 10%;
+    width: 95%;
+    min-height: 30%;
     max-height: auto;
-    font-weight: 500;
+    font-weight: 400;
+    line-height: 1.2em;
     font-size: .75em;
-    justify-content: center;
     text-transform: uppercase;
     overflow: hidden;
     /* Evita que el contenido sobresalga */
     text-align: center;
+
 }
 
 .tarj-precio {
@@ -280,14 +289,22 @@ main {
 .carrito-tienda {
     background-color: var(--color-verde-sombra);
     border-radius: .5em;
+    
 }
 
-.carrito-tienda h3 {
+
+.carrito-producto {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: var(--color-texto-negro);
+    flex-direction: row; /* Cambiado a row para que los elementos se posicionen uno al lado del otro */
+    justify-content: center; /* Alinea los elementos horizontalmente */
+    align-items: center; /* Alinea los elementos verticalmente */
+    border-radius: 1rem;
+    border: 2px solid;
+    padding: .5em;
+    height: auto; /* Altura automática para ajustarse al contenido */
+    max-width: 99vh;
 }
+
 /*** NOSOTROS ***/
 .sobreNosotros {
     margin-top: 1em;
@@ -308,7 +325,8 @@ main {
     bottom: 1em;
     transition: width 0.3s, border 0.3s;
     margin: .5em;
-    z-index: 1000; /* Asegura que el logo esté en la parte superior */
+    z-index: 1000;
+    /* Asegura que el logo esté en la parte superior */
 }
 
 .logoWhatsapp:hover {
@@ -377,16 +395,16 @@ h1 {
 /*** Medias queries ***/
 
 @media (min-width: 680px) {
-        .menuNav {
-        grid-template-columns: repeat(3, 1fr); 
-}
+    .menuNav {
+        grid-template-columns: repeat(3, 1fr);
     }
+}
 
-    @media (min-width: 1430px) {
-        .menuNav {
-        grid-template-columns: repeat(6, 1fr); 
-}
+@media (min-width: 1000px) {
+    .menuNav {
+        grid-template-columns: repeat(4, 1fr);
     }
+}
 
 
 @media (max-width: 300px) {
@@ -394,8 +412,9 @@ h1 {
         display: none;
         /* Esconder menú de navegación */
     }
-    
+
 }
+
 @media (max-width: 400px) {
 
     /* pantallas menores a 500px */
@@ -426,21 +445,21 @@ h1 {
     }
 
     .menuNav {
-        grid-template-columns: repeat(1, 1fr); 
-}
+        grid-template-columns: repeat(1, 1fr);
+    }
 
     .menuNav li {
-    font-size: 1em;
-    text-align: center;
-}
+        font-size: 1em;
+        text-align: center;
+    }
 
-li:hover {
-    background-color: var(--color-verde-claro);
-    border: 2px solid var(--color-texto-negro);
-}
+    li:hover {
+        background-color: var(--color-verde-claro);
+        border: 2px solid var(--color-texto-negro);
+    }
 
-/* Estilo para enlaces dentro de <li> */
-li a {
-    padding: .25em;
-}
+    /* Estilo para enlaces dentro de <li> */
+    li a {
+        padding: .25em;
+    }
 }
