@@ -50,7 +50,6 @@ const contenedorProductos = document.querySelector("#productos");
 const carritoVacio = document.querySelector("#carrito-vacio");
 const carritoProductos = document.querySelector("#carrito-productos");
 const carritoTotal = document.querySelector("#carrito-total");
-const btnVaciar = document.querySelector("#vaciar");
 
 // Función para mostrar los productos por categoría
 const mostrarProductos = (productos, contenedor) => {
@@ -168,16 +167,10 @@ const actualizarCarrito = () => {
     if (carrito.length === 0) {
         carritoVacio.classList.remove("d-none");
         carritoProductos.classList.add("d-none");
-        btnVaciar.classList.add("d-none");
-        carritoTotal.classList.add("d-none")
-
         
     } else {
         carritoVacio.classList.add("d-none");
         carritoProductos.classList.remove("d-none");
-        btnVaciar.classList.remove("d-none");
-        carritoTotal.classList.remove("d-none")
-
         carritoProductos.innerHTML = "";
         carrito.forEach(producto => {
             const div = document.createElement("div");
