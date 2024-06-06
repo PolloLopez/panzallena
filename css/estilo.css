@@ -377,13 +377,15 @@ main {
 .btn-finalizar {
     display: flex;
     /* Cambiado a 'flex' para asegurar que el contenido dentro del botón esté centrado */
-    background-color: var(--color-blanco-gris);
-    border: 2px solid var(--color-texto-negro);
+    background-color: var(--color-verde-sombra);
+    border: 3px solid var(--color-texto-negro);
     color: var(--color-texto-negro);
     border-radius: .5em;
     padding: .25em;
     padding-inline: .5em;
     letter-spacing: .15em;
+    text-decoration: none;
+    font-size: 1.5em;
     font-weight: 600;
     align-items: center;
     /* Centra verticalmente el contenido del botón */
@@ -398,9 +400,6 @@ main {
         border: 2px solid var(--color-texto-blanco);
         color: var(--color-texto-blanco);
 }
-
-
-
 
 /*** NOSOTROS ***/
 .sobreNosotros {
