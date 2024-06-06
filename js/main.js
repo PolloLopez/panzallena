@@ -160,14 +160,18 @@ const calcularTotalCarrito = () => {
 };
 
 const actualizarCarrito = () => {
+    console.log("Carrito:", carrito);
     if (carrito.length === 0) {
         carritoVacio.classList.remove("d-none");
         carritoProductos.classList.add("d-none");
+        carritoTotal.classList.add("d-none");
+        document.querySelector(".carritoTotal").classList.add("d-none");
     } else {
         carritoVacio.classList.add("d-none");
         carritoProductos.classList.remove("d-none");
+        carritoTotal.classList.remove("d-none");
         carritoProductos.innerHTML = "";
-        
+
         carrito.forEach(producto => {
             const divProducto = document.createElement("div");
             divProducto.classList.add("carrito-producto");
@@ -205,7 +209,7 @@ const actualizarCarrito = () => {
             divDetalles.appendChild(btnSumar);
 
             const subtotal = document.createElement("p");
-            subtotal.innerText = `$   ${producto.cantidad * producto.precio}`;
+            subtotal.innerText = `$${producto.cantidad * producto.precio}`;
             divDetalles.appendChild(subtotal);
 
             const btnEliminar = document.createElement("button");
@@ -218,12 +222,11 @@ const actualizarCarrito = () => {
 
             divProducto.appendChild(divDetalles);
             carritoProductos.appendChild(divProducto);
-        });
+            });
 
         // Actualizar el total del carrito en el DOM
         carritoTotal.textContent = `$${calcularTotalCarrito()}`;
+        // Mostrar el div "carritoTotal" cuando hay productos en el carrito
+        document.querySelector(".carritoTotal").classList.remove("d-none");
     }
-
-    // Actualizar el carrito en el almacenamiento local
-    localStorage.setItem("carrito", JSON.stringify(carrito));
 };
