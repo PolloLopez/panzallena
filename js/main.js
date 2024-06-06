@@ -111,15 +111,13 @@ const agregarAlCarrito = (tituloProducto) => {
     }
 };
 
-// Función para manipular el carrito
-
 // Funciones para manipular el carrito
 const sumarDelCarrito = (producto) => {
     producto.cantidad++;
     actualizarCarrito();
 
     Toastify({
-        text: "Agregaste 1 producto.",
+        text: "Sumaste 1 producto.",
         gravity: "bottom",
         position: "right",
         duration: 1000
@@ -153,7 +151,6 @@ const borrarDelCarrito = (producto) => {
     }).showToast();
 };
 
-
 const calcularTotalCarrito = () => {
     let total = 0;
     carrito.forEach(producto => {
@@ -162,51 +159,65 @@ const calcularTotalCarrito = () => {
     return total;
 };
 
-
 const actualizarCarrito = () => {
     if (carrito.length === 0) {
         carritoVacio.classList.remove("d-none");
         carritoProductos.classList.add("d-none");
-        
     } else {
         carritoVacio.classList.add("d-none");
         carritoProductos.classList.remove("d-none");
         carritoProductos.innerHTML = "";
+        
         carrito.forEach(producto => {
-            const div = document.createElement("div");
-            div.classList.add("carrito-producto");
-            div.innerHTML = `
-                <h3>${producto.titulo}</h3>
-                <p>$${producto.precio}</p>
-                <p>Cantidad: ${producto.cantidad}</p>
-                <p>Subtotal: ${producto.cantidad * producto.precio}</p>
-            `;
+            const divProducto = document.createElement("div");
+            divProducto.classList.add("carrito-producto");
+
+            const divTitulo = document.createElement("div");
+            divTitulo.classList.add("carrito-producto-titulo");
+            divTitulo.innerHTML = `<h3>${producto.titulo}</h3>`;
+            divProducto.appendChild(divTitulo);
+
+            const divDetalles = document.createElement("div");
+            divDetalles.classList.add("carrito-producto-detalles");
+
+            const precioCarrito = document.createElement("p");
+            precioCarrito.innerText = `$${producto.precio}`;
+            divDetalles.appendChild(precioCarrito);
 
             const btnRestar = document.createElement("button");
-            btnRestar.classList.add("carrito-producto-btn");
+            btnRestar.classList.add("btn-carrito");
             btnRestar.innerText = "🔻";
             btnRestar.addEventListener("click", () => {
                 restarDelCarrito(producto);
             });
-            div.appendChild(btnRestar);
+            divDetalles.appendChild(btnRestar);
+
+            const cantidad = document.createElement("p");
+            cantidad.innerText = `${producto.cantidad}`;
+            divDetalles.appendChild(cantidad);
 
             const btnSumar = document.createElement("button");
-            btnSumar.classList.add("carrito-producto-btn");
+            btnSumar.classList.add("btn-carrito");
             btnSumar.innerText = "🔺";
             btnSumar.addEventListener("click", () => {
                 sumarDelCarrito(producto);
             });
-            div.appendChild(btnSumar);
+            divDetalles.appendChild(btnSumar);
+
+            const subtotal = document.createElement("p");
+            subtotal.innerText = `$   ${producto.cantidad * producto.precio}`;
+            divDetalles.appendChild(subtotal);
 
             const btnEliminar = document.createElement("button");
-            btnEliminar.classList.add("carrito-producto-btn");
+            btnEliminar.classList.add("btn-carrito");
             btnEliminar.innerText = "❌";
             btnEliminar.addEventListener("click", () => {
                 borrarDelCarrito(producto);
             });
-            div.appendChild(btnEliminar);
+            divDetalles.appendChild(btnEliminar);
 
-            carritoProductos.appendChild(div);
+            divProducto.appendChild(divDetalles);
+            carritoProductos.appendChild(divProducto);
         });
 
         // Actualizar el total del carrito en el DOM
@@ -216,7 +227,3 @@ const actualizarCarrito = () => {
     // Actualizar el carrito en el almacenamiento local
     localStorage.setItem("carrito", JSON.stringify(carrito));
 };
-
-
-// Llamar a actualizarCarrito para inicializar la vista del carrito
-carritoTotal();

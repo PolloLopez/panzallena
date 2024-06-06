@@ -220,8 +220,8 @@ main {
     /* letter-spacing: .05em; */
     color: var(--color-texto-blanco);
     text-transform: uppercase;
-    /* word-wrap: break-word; */
-    /* overflow: hidden; */
+    word-wrap: break-word;
+    overflow: hidden;
 }
 
 .tarj-descrip {
@@ -231,7 +231,6 @@ main {
     padding: .02em;
     margin: 0;
     width: 95%;
-    min-height: 30%;
     max-height: auto;
     font-weight: 400;
     line-height: 1.2em;
@@ -240,7 +239,6 @@ main {
     overflow: hidden;
     /* Evita que el contenido sobresalga */
     text-align: center;
-
 }
 
 .tarj-precio {
@@ -286,24 +284,61 @@ main {
 }
 
 /*** carrito ***/
-.carrito-tienda {
+.carritoTienda {
     background-color: var(--color-verde-sombra);
     border-radius: .5em;
-    
 }
-
 
 .carrito-producto {
     display: flex;
-    flex-direction: row; /* Cambiado a row para que los elementos se posicionen uno al lado del otro */
-    justify-content: center; /* Alinea los elementos horizontalmente */
-    align-items: center; /* Alinea los elementos verticalmente */
+    flex-direction: column;
     border-radius: 1rem;
     border: 2px solid;
     padding: .5em;
-    height: auto; /* Altura automática para ajustarse al contenido */
-    max-width: 99vh;
+    height: 5em;
+    margin: .1em;
+    text-transform: uppercase;
+    font-weight: 500;
 }
+
+.carrito-producto-titulo {
+    width: auto;
+    text-align: center;
+    padding: 0;
+    margin-bottom: .2em;
+    height: auto;
+}
+
+.carrito-producto-detalles {
+    display: flex;
+    flex-direction: row; /* Posicionar los elementos en una fila */
+    justify-content: space-between;
+    align-items: center; 
+    margin: 0;
+    margin-inline: 1em;
+}
+
+.carrito-producto h3 {
+    color: black;
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.carrito-producto p {
+    display: block;
+    justify-items: end;
+    font-size: 1.2em;
+    color: var(--color-texto-negro);
+    margin: 0;
+
+}
+
+.btn-carrito {
+    border-radius: .5em;
+}
+
+
 
 /*** NOSOTROS ***/
 .sobreNosotros {
@@ -394,51 +429,6 @@ h1 {
 
 /*** Medias queries ***/
 
-@media (min-width: 680px) {
-    .menuNav {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media (min-width: 1000px) {
-    .menuNav {
-        grid-template-columns: repeat(4, 1fr);
-    }
-}
-
-
-@media (max-width: 300px) {
-    .nav-menu {
-        display: none;
-        /* Esconder menú de navegación */
-    }
-
-}
-
-@media (max-width: 400px) {
-
-    /* pantallas menores a 500px */
-    .titulo {
-        display: none;
-    }
-}
-
-/* Dispositivos pequeños (teléfonos en modo retrato) */
-@media (max-width: 480px) {
-    .contenedorProductos {
-        padding: .5em;
-    }
-
-    .titulo {
-        font-size: 1.5em;
-    }
-
-    .logoWhatsapp {
-        right: .25em;
-        bottom: .5em;
-    }
-}
-
 @media (max-width: 380px) {
     .titulos {
         font-size: 1.5em;
@@ -459,7 +449,48 @@ h1 {
     }
 
     /* Estilo para enlaces dentro de <li> */
-    li a {
+    /* li a {
         padding: .25em;
+    } */
+}
+
+
+/* @media (max-width: 400px) {
+
+    /* pantallas menores a 500px *
+    .titulo {
+        display: none;
+    }
+} */
+
+/* Dispositivos pequeños (teléfonos en modo retrato) */
+/* @media (max-width: 480px) { 
+    .contenedorProductos {
+        padding: .5em;
+    }
+
+    .titulo {
+        font-size: 1.5em;
+    }
+
+    .logoWhatsapp {
+        right: .25em;
+        bottom: .5em;
     }
 }
+
+@media (min-width: 680px) {
+    .menuNav {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1000px) {
+    .menuNav {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .nav-menu {
+        display: none;        /* Esconder menú de navegación 
+    }
+}
+/*
