@@ -16,17 +16,17 @@
     <!-- CSS BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <!-- CSS MIO-->
+    <!-- ICONOS BOOTSTRAP -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- CSS MIO -->
     <link rel="stylesheet" href="css/estilo.css">
-    <!-- Favicon 
-        <link rel="icon" href="img/favicon.ico"> -->
 </head>
 
 <body>
     <header class="navbar navbar-expand-lg">
         <div class="encabezado">
             <div class="d-flex align-items-center">
-                <img class="imgLogo" src="./img/logo1.png" href="index.html" alt="Logo Panza llena">
+                <a href="index.html"><img class="imgLogo" src="./img/logo1.png" alt="Logo Panza llena"></a>
                 <h1 class="titulo">PANZA LLENA</h1>
             </div>
         </div>
@@ -36,65 +36,65 @@
         </button>
         <nav class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto menuNav">
-                <li><a href="#rellenas">Rellenas</a>
-                </li>
-                <li><a href="#tradicionales">Tradicionales</a>
-                </li>
-                <li><a href="#salsas">Salsas</a>
-                </li>
-                <li><a href="#postres">Postres</a>
-                </li>
-                <li><a href="#nosotros">Nosotros</a>
-                </li>
-                <li><a href="#contactanos">Contactanos</a>
-                </li>
+                <li><a href="#rellenas">Rellenas</a></li>
+                <li><a href="#tradicionales">Tradicionales</a></li>
+                <li><a href="#salsas">Salsas</a></li>
+                <li><a href="#postres">Postres</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#contactanos">Contactanos</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+        <button id="carrito-icono" class="containerTienda" aria-label="ir al carrito">
+            <a href="#carrito-productos" class="carrtio-main">
+                <i class="bi bi-cart2"></i>
+                <span id="numerito"> 0 </span>
+            </a>
+        </button>
         <!-- NUESTRO MENU -->
         <nav class="contenedorProductos">
             <div id="rellenas">
-                <h2 class="titulos">Raviolones</h2>
-                <p class="porcion">(porcion sugerida 8 - 10 unidades)</p>
-                <div id="contRaviolones" class="productos"></div>
-            </div>
+                <div>
+                    <h2 class="titulos">Raviolones</h2>
+                    <p class="porcion">(porcion sugerida 8 - 10 unidades)</p>
+                    <div id="contRaviolones" class="productos"></div>
+                </div>
 
-            <div>
-                <h2 class="titulos">Sorrentinos</h2>
-                <p class="porcion">(porcion sugerida 8 - 10 unidades)</p>
-                <div id="contSorrentinos" class="productos"></div>
-            </div>
+                <div>
+                    <h2 class="titulos">Sorrentinos</h2>
+                    <p class="porcion">(porcion sugerida 8 - 10 unidades)</p>
+                    <div id="contSorrentinos" class="productos"></div>
+                </div>
 
-            <div>
-                <h2 class="titulos">Capelettis</h2>
-                <p class="porcion">(porcion sugerida 10 unidades)</p>
-                <div id="contCapelettis" class="productos"></div>
-            </div>
+                <div>
+                    <h2 class="titulos">Capelettis</h2>
+                    <p class="porcion">(porcion sugerida 10 unidades)</p>
+                    <div id="contCapelettis" class="productos"></div>
+                </div>
 
-            <div>
-                <h2 class="titulos">Canelones</h2>
-                <p class="porcion">porcion sugerida XXXX unidades</p>
-                <div id="contCanelones" class="productos"></div>
-            </div>
+                <div>
+                    <h2 class="titulos">Canelones</h2>
+                    <p class="porcion">(porcion sugerida 3 unidades)</p>
+                    <div id="contCanelones" class="productos"></div>
+                </div>
 
-            <div>
-                <h2 class="titulos">Ñocones</h2>
-                <p class="porcion">(porcion sugerida 10 unidades)</p>
-                <div id="contNocones" class="productos"></div>
-            </div>
+                <div>
+                    <h2 class="titulos">Ñocones</h2>
+                    <p class="porcion">(porcion sugerida 10 unidades)</p>
+                    <div id="contNocones" class="productos"></div>
+                </div>
 
-            <div>
-                <h2 class="titulos">Lasagna</h2>
-                <div id="contLasagna" class="productos"></div>
+                <div>
+                    <h2 class="titulos">Lasagna</h2>
+                    <div id="contLasagna" class="productos"></div>
+                </div>
             </div>
-
             <div>
                 <h2 id="tradicionales" class="titulos">Tallarines</h2>
                 <p class="porcion">(porcion sugerida para 2 personas)</p>
-                <div id="contTallarines" class="productos">
-                </div>
+                <div id="contTallarines" class="productos"></div>
             </div>
 
             <div id="salsas">
@@ -108,7 +108,7 @@
             </div>
 
             <!-- /*** CARRITO ***/ -->
-            <section class="containerTienda">
+            <section>
                 <h2>Carrito</h2>
                 <div class="carritoTienda">
                     <div id="carrito-vacio">
@@ -120,7 +120,7 @@
                     <div class="carritoTotal d-none">
                         <h3>Total:</h3> <span id="carrito-total">$0</span>
                     </div>
-                    <div clas="divFinalizar">
+                    <div class="divFinalizar">
                         <a class="btn-finalizar" id="finalizarCompra">TERMINAR LA COMPRA</a>
                     </div>
                 </div>
