@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -7,11 +7,10 @@
     <meta name="description"
         content="Especialistas en pastas artesanales, naturales y libres de conservantes. Con sabores únicos y tradicionales." />
     <meta name="keywords" content="pastas, naturales, fideos, comida, casera, salsas, artesanal">
-
+    <title>Panza llena</title>
     <!-- Icono en la pestaña -->
     <link rel="icon" type="image/x-icon" href="./img/logo1.png">
-    <title>Panza llena</title>
-    <!-- TOASTIFY -->
+        <!-- TOASTIFY -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <!-- CSS BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -47,12 +46,39 @@
     </header>
 
     <main>
-        <button id="carrito-icono" class="containerTienda" aria-label="ir al carrito">
-            <a href="#carrito-productos" class="carrtio-main">
-                <i class="bi bi-cart2"></i>
-                <span id="numerito"> 0 </span>
-            </a>
-        </button>
+                    <!-- NOSOTROS -->
+                    <div class="sobreNosotros" id="nosotros">
+                        <h2 class="titulos">Nosotros</h2>
+                        <p class="none">Panza llena nació en medio de una pandemia, en el año 2020. Recorrimos un largo camino,
+                            desde cosas
+                            dulces hasta llegar a nuestra pasión y especialidad, las pastas. Siempre con especial atención a la
+                            calidad de nuestros productos y a la satisfacción de nuestros clientes.
+                            Hoy nuestras fuerzas y energías están destinadas a promover un producto artesanal, natural, sin
+                            conservantes. Innovando en los sabores y la presentación, con sus colores característicos logrados
+                            con
+                            verduras y condimentos, libres de químicos, pero respetando también nuestras raíces y lo
+                            tradicional.
+                            Nuestro objetivo es seguir creciendo y promoviendo esa experiencia única: la de compartir un momento
+                            especial con la familia o entre amigos, con nuestras pastas en su mesa.
+                        </p>
+                        <p>
+                            Panza Llena nació en medio de la pandemia del año 2020. Hemos recorrido un largo camino, desde la
+                            elaboración de productos dulces hasta encontrar nuestra verdadera pasión y especialidad: las pastas.
+                            Siempre hemos puesto especial atención en la calidad de nuestros productos y en la satisfacción de
+                            nuestros clientes.
+                        </p>
+                        <p>
+                            Hoy, nuestras fuerzas y energías están destinadas a promover un producto artesanal, natural y libre
+                            de
+                            conservantes. Innovamos en sabores y presentación, utilizando colores característicos logrados con
+                            verduras y
+                            condimentos sin químicos, siempre respetando nuestras raíces y lo tradicional.
+                        </p>
+                        <p>
+                            Nuestro objetivo es seguir creciendo y ofrecer experiencias únicas: compartir un momento especial en
+                            familia o entre amigos, con nuestras pastas en su mesa.
+                        </p>
+                    </div>
         <!-- NUESTRO MENU -->
         <nav class="contenedorProductos">
             <div id="rellenas">
@@ -109,7 +135,13 @@
 
             <!-- /*** CARRITO ***/ -->
             <section>
-                <h2>Carrito</h2>
+                <button id="carrito-icono" class="containerTienda" aria-label="ir al carrito">
+                    <a href="#carrito-cargado">
+                        <i class="bi bi-cart2"></i>
+                        <span id="numerito"> 0 </span>
+                    </a>
+                </button>
+                <h2 id="carrito-cargado" class="titulo-carrito">Carrito</h2>
                 <div class="carritoTienda">
                     <div id="carrito-vacio">
                         <h3>El carrito está vacío!</h3>
@@ -126,39 +158,7 @@
                 </div>
             </section>
 
-            <!-- NOSOTROS -->
-            <div class="sobreNosotros" id="nosotros">
-                <h2 class="titulos">Nosotros</h2>
-                <p class="none">Panza llena nació en medio de una pandemia, en el año 2020. Recorrimos un largo camino,
-                    desde cosas
-                    dulces hasta llegar a nuestra pasión y especialidad, las pastas. Siempre con especial atención a la
-                    calidad de nuestros productos y a la satisfacción de nuestros clientes.
-                    Hoy nuestras fuerzas y energías están destinadas a promover un producto artesanal, natural, sin
-                    conservantes. Innovando en los sabores y la presentación, con sus colores característicos logrados
-                    con
-                    verduras y condimentos, libres de químicos, pero respetando también nuestras raíces y lo
-                    tradicional.
-                    Nuestro objetivo es seguir creciendo y promoviendo esa experiencia única: la de compartir un momento
-                    especial con la familia o entre amigos, con nuestras pastas en su mesa.
-                </p>
-                <p>
-                    Panza Llena nació en medio de la pandemia del año 2020. Hemos recorrido un largo camino, desde la
-                    elaboración de productos dulces hasta encontrar nuestra verdadera pasión y especialidad: las pastas.
-                    Siempre hemos puesto especial atención en la calidad de nuestros productos y en la satisfacción de
-                    nuestros clientes.
-                </p>
-                <p>
-                    Hoy, nuestras fuerzas y energías están destinadas a promover un producto artesanal, natural y libre
-                    de
-                    conservantes. Innovamos en sabores y presentación, utilizando colores característicos logrados con
-                    verduras y
-                    condimentos sin químicos, siempre respetando nuestras raíces y lo tradicional.
-                </p>
-                <p>
-                    Nuestro objetivo es seguir creciendo y ofrecer experiencias únicas: compartir un momento especial en
-                    familia o entre amigos, con nuestras pastas en su mesa.
-                </p>
-            </div>
+
         </nav>
         <a href="https://api.whatsapp.com/send?phone=542324529751&text=Hola,%20Panza%20LLena%20me%20tente%20con%20sus%20productos"
             target="_blank">

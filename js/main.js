@@ -54,6 +54,7 @@ const contenedorProductos = document.querySelector("#productos");
 const carritoVacio = document.querySelector("#carrito-vacio");
 const carritoProductos = document.querySelector("#carrito-productos");
 const carritoTotal = document.querySelector("#carrito-total");
+const carritoIcono = document.querySelector("#carrito-icono");
 const numeritoTotal = document.querySelector("#numerito");
 
 
@@ -110,8 +111,8 @@ const agregarAlCarrito = (tituloProducto) => {
         Toastify({
             text: "Producto agregado!",
             gravity: "bottom",
-            position: "left",
-            duration: 3000,
+            position: `center`,
+            duration: 2500,
             className: "toastify-info"
         }).showToast();
     } else {
@@ -128,7 +129,7 @@ const sumarDelCarrito = (producto) => {
     Toastify({
         text: "Producto sumado!",
         gravity: "bottom",
-        position: "left",
+        position: `center`,
         duration: 2000,
         className: "toastify-info"
     }).showToast();
@@ -143,7 +144,7 @@ const restarDelCarrito = (producto) => {
     Toastify({
         text: "Producto quitado.",
         gravity: "bottom",
-        position: "left",
+        position: `center`,
         duration: 2000,
         className: "toastify-info"
     }).showToast();
@@ -157,7 +158,7 @@ const borrarDelCarrito = (producto) => {
     Toastify({
         text: "Producto ELIMINADO!",
         gravity: "bottom",
-        position: "left",
+        position: `center`,
         duration: 2000,
         className: "toastify-info"
     }).showToast();
@@ -179,7 +180,6 @@ const actualizarCarrito = () => {
         carritoVacio.classList.remove("d-none");
         carritoProductos.classList.add("d-none");
         carritoTotal.classList.add("d-none");
-        document.querySelector(".carritoTotal").classList.add("d-none");
     } else {
         carritoVacio.classList.add("d-none");
         carritoProductos.classList.remove("d-none");
@@ -244,7 +244,7 @@ const actualizarCarrito = () => {
         // Actualizar el total del carrito en el DOM
         carritoTotal.textContent = `$${calcularTotalCarrito()}`;
         // Mostrar el div "carritoTotal" cuando hay productos en el carrito
-        document.querySelector(".carritoTotal").classList.remove("d-none");
+      //  document.querySelector(".carritoTotal").classList.remove("d-none");
     }
 };
 
@@ -258,9 +258,5 @@ const calcularNumerito = () => {
     return numeritoTotal;
 }
 
-btnVaciar.addEventListener("click", () => {
-    carrito.length = 0;
     actualizarCarrito();
-});
-
-actualizarCarrito();; // va al final para que se actualice con el total de carrito
+;
