@@ -355,6 +355,7 @@ a {
     padding: 0;
     margin-left: 1em;
 }
+
 .carrito-producto h3 {
     justify-content: end;
     color: var(--color-texto-negro);
@@ -368,7 +369,7 @@ a {
     display: flex;
     flex-direction: row;
     /* Posicionar los elementos en una fila */
-    justify-content:space-around;
+    justify-content: space-around;
     align-items: center;
     margin: 0;
     margin-inline: 1em;
@@ -462,6 +463,19 @@ a {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', Verdana, sans-serif;
 }
 
+.loProductos {
+    display: grid;
+    grid-column: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5em;
+    margin: .5rem;
+    color: var(--color-texto-negro);
+    font-weight: 800;
+    max-width: 100%;
+}
+
 /*** FOOTER ***/
 .logoWhatsapp {
     width: 2.5em;
@@ -521,7 +535,6 @@ footer p {
 .none {
     display: none;
 }
-
 
 h2,
 h3,

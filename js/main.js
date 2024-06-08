@@ -179,10 +179,12 @@ const actualizarCarrito = () => {
     if (carrito.length === 0) {
         carritoVacio.classList.remove("d-none");
         carritoProductos.classList.add("d-none");
+        carritoIcono.classList.add("d-none");
         carritoTotal.classList.add("d-none");
     } else {
         carritoVacio.classList.add("d-none");
         carritoProductos.classList.remove("d-none");
+        carritoIcono.classList.remove("d-none");
         carritoTotal.classList.remove("d-none");
         carritoProductos.innerHTML = "";
 
