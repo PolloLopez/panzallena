@@ -127,6 +127,31 @@ a {
     text-decoration: none;
 }
 
+/*** NOSOTROS ***/
+.sobreNosotros {
+    margin-top: .3em;
+}
+
+.sobreNosotros p {
+    text-align: justify;
+    line-height: 1.5em;
+    margin: 1em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', Verdana, sans-serif;
+}
+
+.loProductos {
+    display: grid;
+    grid-column: auto;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.5em;
+    margin: .5rem;
+    color: var(--color-texto-negro);
+    font-weight: 800;
+    max-width: 100%;
+}
+
 /***    CARRITO ICONO    ***/
 
 .containerTienda {
@@ -150,8 +175,9 @@ a {
 
 .contenedorProductos {
     position: relative;
-    padding: 1em;
+    padding: 0;
     padding-top: .5em;
+    margin-top: 1em;
 }
 
 /***   TOASTIFY   ***/
@@ -203,6 +229,7 @@ a {
 .productos {
     height: 90%;
     display: grid;
+    margin: .5em;
     gap: .5em;
     background-color: var(--color-verde-sombra);
     border-radius: 0.5em;
@@ -216,7 +243,6 @@ a {
     padding: .25rem;
     height: auto;
     overflow: hidden;
-    margin: .0;
 }
 
 .tarj-index {
@@ -449,31 +475,6 @@ a {
     background-color: var(--color-verde-claro);
     border: 2px solid var(--color-texto-blanco);
     color: var(--color-texto-blanco);
-}
-
-/*** NOSOTROS ***/
-.sobreNosotros {
-    margin-top: .3em;
-}
-
-.sobreNosotros p {
-    text-align: justify;
-    line-height: 1.5em;
-    margin: 0;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', Verdana, sans-serif;
-}
-
-.loProductos {
-    display: grid;
-    grid-column: auto;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    font-size: 1.5em;
-    margin: .5rem;
-    color: var(--color-texto-negro);
-    font-weight: 800;
-    max-width: 100%;
 }
 
 /*** FOOTER ***/
