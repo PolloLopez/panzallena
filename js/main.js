@@ -53,9 +53,12 @@ fetch("./data/productos.json")
 const contenedorProductos = document.querySelector("#productos");
 const carritoVacio = document.querySelector("#carrito-vacio");
 const carritoProductos = document.querySelector("#carrito-productos");
+const carritoTotalElement = document.querySelector(".carritoTotal");
 const carritoTotal = document.querySelector("#carrito-total");
+const finalizarCompra = document.querySelector(".divFinalizar");
 const carritoIcono = document.querySelector("#carrito-icono");
-const numeritoTotal = document.querySelector("#numerito");
+const numerito = document.querySelector("#numerito");
+const desaparecer = document.querySelector(".desaparecer");
 
 
 // ***   Función para mostrar los productos por categoría    *** ///
@@ -89,8 +92,8 @@ const mostrarProductos = (productos, contenedor) => {
     });
 };
 
-// ***    Función para agregar productos al carrito    *** //
 
+// *** Función para agregar productos al carrito *** //
 const agregarAlCarrito = (tituloProducto) => {
     // Buscar el producto por su título
     const producto = productos.find(prod => prod.titulo === tituloProducto);
@@ -125,9 +128,8 @@ const agregarAlCarrito = (tituloProducto) => {
 const sumarDelCarrito = (producto) => {
     producto.cantidad++;
     actualizarCarrito();
-
     Toastify({
-        text: "Producto sumado!",
+        text: "Sumado!",
         gravity: "bottom",
         position: `center`,
         duration: 2000,
@@ -136,13 +138,15 @@ const sumarDelCarrito = (producto) => {
 };
 
 const restarDelCarrito = (producto) => {
-    if (producto.cantidad !== 1) {
+    if (producto.cantidad > 1) {
         producto.cantidad--;
+    } else {
+        const prodIndex = carrito.findIndex(item => item.titulo === producto.titulo);
+        carrito.splice(prodIndex, 1);
     }
     actualizarCarrito();
-
     Toastify({
-        text: "Producto quitado.",
+        text: "Quitado.",
         gravity: "bottom",
         position: `center`,
         duration: 2000,
@@ -159,7 +163,7 @@ const borrarDelCarrito = (producto) => {
         text: "Producto ELIMINADO!",
         gravity: "bottom",
         position: `center`,
-        duration: 2000,
+        duration: 2200,
         className: "toastify-info"
     }).showToast();
 };
@@ -172,20 +176,21 @@ const calcularTotalCarrito = () => {
     return total;
 };
 
-//  ****    CARRITO    ****  //
-
+// *** Función para actualizar el CARRITO en el DOM *** //
 const actualizarCarrito = () => {
     console.log("Carrito:", carrito);
     if (carrito.length === 0) {
         carritoVacio.classList.remove("d-none");
         carritoProductos.classList.add("d-none");
+        finalizarCompra.classList.add("d-none");
+        desaparecer.classList.add("d-none");
         carritoIcono.classList.add("d-none");
-        carritoTotal.classList.add("d-none");
     } else {
         carritoVacio.classList.add("d-none");
         carritoProductos.classList.remove("d-none");
+        finalizarCompra.classList.remove("d-none");
+        desaparecer.classList.remove("d-none");
         carritoIcono.classList.remove("d-none");
-        carritoTotal.classList.remove("d-none");
         carritoProductos.innerHTML = "";
 
         carrito.forEach(producto => {
@@ -245,8 +250,6 @@ const actualizarCarrito = () => {
 
         // Actualizar el total del carrito en el DOM
         carritoTotal.textContent = `$${calcularTotalCarrito()}`;
-        // Mostrar el div "carritoTotal" cuando hay productos en el carrito
-      //  document.querySelector(".carritoTotal").classList.remove("d-none");
     }
 };
 
@@ -261,4 +264,5 @@ const calcularNumerito = () => {
 }
 
     actualizarCarrito();
+    actualizarTotal();
 ;
