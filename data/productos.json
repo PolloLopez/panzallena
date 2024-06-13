@@ -1,218 +1,178 @@
 [
     {
-        "titulo": "Verdura y ricota",
-        "precio": 1000,
-        "descripcion": "Bondiola al malbec cocida con hiervas; masa con tinta de remolacha",
-        "img": "./img/pastas1.png",
+        "titulo": "VERDURA Y RICOTA",
+        "precio": 5200,
+        "descripcion": "Clásico relleno de nuestras abuelas, ricota, acelga ajo y perejil.",
+        "img": "./img/1.jpeg",
         "cantidad": "12 unidades",
         "categoria": "RAVIOLONES"
     },
     {
-        "titulo": "Roast beef al malbec",
-        "precio": 2000,
-        "descripcion": "Roast beaf al malbec cocida con hiervas; masa con tinta de remolacha.al malbec cocida con hiervas.",
-        "img": "./img/pastas12.png",
-        "cantidad": "12 unidades",
-        "categoria": "RAVIOLONES"
-    },
-    {
-        "titulo": "Verdura y pollo",
-        "precio": 3000,
-        "descripcion": " con hiervas; masa con tinta de remolacha",
-        "img": "./img/pastas3.png",
-        "cantidad": "12 unidades",
-        "categoria": "RAVIOLONES"
-    },
-    {
-        "titulo": "bondiola a la cerveza",
-        "precio": 4000,
-        "descripcion": "Basa con tinta de remolacha",
-        "img": "./img/pastas4.png",
-        "cantidad": "12 unidades",
-        "categoria": "RAVIOLONES"
-    },
-    {
-        "titulo": "cheddar, panceta y pollo ",
-        "precio": 5000,
-        "descripcion": "Bondiola al malbec cocida con hiervas; de remolacha",
-        "img": "./img/pastas5.png",
-        "cantidad": "12 unidades",
-        "categoria": "RAVIOLONES"
-    },
-    {
-        "titulo": "salmon rosado",
+        "titulo": "VERDURA Y POLLO",
         "precio": 6000,
-        "descripcion": "cocida con hiervas; masa con tinta de remolacha",
-        "img": "./img/pastas18.png",
+        "descripcion": "Pechuga de pollo salteada con verduras ",
+        "img": "./img/2.jpeg",
         "cantidad": "12 unidades",
         "categoria": "RAVIOLONES"
     },
     {
-        "titulo": "CALABAZA",
-        "precio": 1000,
-        "descripcion": "Bondiola al malbec cocida con hiervas; masa con tinta de remolacha",
-        "img": "./img/pastas7.png",
+        "titulo": "CHEDDAR PANCETA Y VERDEO ",
+        "precio": 7500,
+        "descripcion": "Panceta salteada con cebolla, verdeo, y queso cheddar fundido",
+        "img": "./img/3.jpeg",
+        "cantidad": "12 unidades",
+        "categoria": "RAVIOLONES"
+    },
+    {
+        "titulo": "BONDIOLA",
+        "precio": 8400,
+        "descripcion": "Bondiola desmenuzada, braseada con verduras durante 5 hs en cerveza y miel",
+        "img": "./img/4.jpeg",
+        "cantidad": "12 unidades",
+        "categoria": "RAVIOLONES"
+    },
+    {
+        "titulo": "ROAST BEEF ",
+        "precio": 8400,
+        "descripcion": "Roast beef desmenuzado  luego de una cocción de 5 hs en vino malbec con verduras",
+        "img": "./img/5.jpeg",
+        "cantidad": "12 unidades",
+        "categoria": "RAVIOLONES"
+    },
+    {
+        "titulo": "SALMON ROSADO",
+        "precio": 15000,
+        "descripcion": "Salmon sellado previamente con manteca y ajo, con una cocción en horno con rodajas de limón y romero, desmenuzado con queso crema y cibulette ",
+        "img": "./img/6.jpeg",
+        "cantidad": "12 unidades",
+        "categoria": "RAVIOLONES"
+    },
+    {
+        "titulo": "JAMON, QUESO Y RICOTA",
+        "precio": 6500,
+        "descripcion": "Jamon cocido, ricota y queso cremoso.",
+        "img": "./img/7.jpeg",
         "cantidad": "12 unidades",
         "categoria": "SORRENTINOS"
     },
     {
-        "titulo": "jamon y queso",
-        "precio": 1000,
-        "descripcion": "Bondiola al malbec cocida con hiervas; masa con tinta de remolacha",
-        "img": "./img/pastas8.png",
+        "titulo": "CALABAZA Y QUESO",
+        "precio": 6500,
+        "descripcion": "Cabutia asada, cebolla caramelizada y un corazón de queso cremoso.",
+        "img": "./img/8.jpeg",
         "cantidad": "12 unidades",
         "categoria": "SORRENTINOS"
     },
     {
-        "titulo": "Cinco quesos",
-        "precio": 1000,
-        "descripcion": "Roque - sardo - reggianito - pategras - briecocida con hiervas; masa con tinta de remolacha",
-        "img": "./img/pastas11.png",
+        "titulo": "RICOTA Y NUEZ",
+        "precio": 6500,
+        "descripcion": "Ricota mezclada con nueces picadas y cebolla salteada.",
+        "img": "./img/9.jpeg",
         "cantidad": "12 unidades",
         "categoria": "SORRENTINOS"
     },
     {
-        "titulo": "boniato",
-        "precio": 2000,
-        "descripcion": "eso que se parece una batata; masa con tinta de remolacha.Bondiola al malbec cocida con hiervas.",
-        "img": "./img/pastas12.png",
+        "titulo": "5 QUESOS",
+        "precio": 7500,
+        "descripcion": "Queso azul, ricota, queso pategras, queso sardo y un corazón de queso cremoso.",
+        "img": "./img/10.jpeg",
         "cantidad": "12 unidades",
         "categoria": "SORRENTINOS"
     },
     {
-        "titulo": "ricota y nuez",
-        "precio": 2000,
-        "descripcion": "masa con tinta de remolacha. Bondiola al malbec cocida con hiervas.",
-        "img": "./img/pastas13.png",
+        "titulo": "BONIATO Y QUESO",
+        "precio": 6500,
+        "descripcion": "Boniato, papa, cebolla caramelizada y queso cremoso.",
+        "img": "./img/11.jpeg",
         "cantidad": "12 unidades",
         "categoria": "SORRENTINOS"
-    },
+    },    
     {
-        "titulo": "Verdura y pollo",
-        "precio": 3100,
-        "descripcion": " con hiervas; masa con tinta de remolacha",
-        "img": "./img/pastas14.png",
+        "titulo": "CAPELETTIS VERDURA Y RICOTA",
+        "precio": 8500,
+        "descripcion": "Clásico relleno de nuestras abuelas, ricota, acelga ajo y perejil.",
+        "img": "./img/12.jpeg",
         "cantidad": "12 unidades",
         "categoria": "CAPELETTIS"
     },
     {
-        "titulo": "Verdura y ricota",
-        "precio": 3000,
-        "descripcion": " con hiervas;e remolacha",
-        "img": "./img/pastas15.png",
+        "titulo": "CAPELETTIS VERDURA Y POLLO ",
+        "precio": 8500,
+        "descripcion": "Pechuga de pollo salteada con verduras ",
+        "img": "./img/13.jpeg",
         "cantidad": "12 unidades",
         "categoria": "CAPELETTIS"
     },
     {
-        "titulo": "Verdura y QUESO",
-        "precio": 3000,
-        "descripcion": " con hiervas; masa con tinta de remolacha",
-        "img": "./img/pastas16.png",
-        "cantidad":"1 unidad",
-        "categoria": "CANELONES"
+        "titulo": "QUESO CREMOSO",
+        "precio": 7500,
+        "descripcion": "Ñoquis de papa rellenos de queso cremoso",
+        "img": "./img/14.jpeg",
+        "cantidad": "20 unidades",
+        "categoria": "NOCONES"
+    },
+    {
+        "titulo": "QUESO AZUL",
+        "precio": 8500,
+        "descripcion": "Ñoquis de papa rellenos de queso queso azul",
+        "img": "./img/15.jpeg",
+        "cantidad":  "20 unidades",
+        "categoria": "NOCONES"
     },
     {
         "titulo": "PURO HUEVO",
-        "precio": 3000,
-        "descripcion": " con hiervas; masa con tinta de remolacha",
-        "img": "./img/pastas17.png",
+        "precio": 3300,
+        "descripcion": " ",
+        "img": "./img/16.jpeg",
         "cantidad": "500 gr",
         "categoria": "TALLARINES"
     },
     {
-        "titulo": "Verdura",
-        "precio": 3000,
-        "descripcion": " con hiervas; masa con tinta de remolacha",
-        "img": "./img/pastas18.png",
+        "titulo": "VERDURA",
+        "precio": 3300,
+        "descripcion": " ",
+        "img": "./img/17.jpeg",
         "cantidad": "500 gr",
         "categoria": "TALLARINES"
     },
     {
-        "titulo": "CLASICOS",
-        "precio": 3000,
-        "descripcion": " con hiervas; masa con tinta de remolacha",
-        "img": "./img/pastas19.png",
-        "cantidad": "10 unidades",
-        "categoria": "NOCONES"
+        "titulo": "CANELONES",
+        "precio": 8500,
+        "descripcion": "Rellenos de verduras salteadas y queso cremoso",
+        "img": "./img/18.jpeg",
+        "cantidad":"6 unidades",
+        "categoria": "CANELONES"
     },
     {
-        "titulo": "Queso Azul",
-        "precio": 3000,
-        "descripcion": " con hiervas; masa con tinta de remolacha",
-        "img": "./img/pastas20.png",
-        "cantidad":  "10 unidades",
-        "categoria": "NOCONES"
-    },
-    {
-        "titulo": "nombre postre 3",
-        "precio": 3000,
-        "descripcion": " con hiervas; masa con tinta de remolacha",
-        "img": "./img/pastas21.png",
-        "cantidad": "500 gr",
+        "titulo": "LASAGNA",
+        "precio": 8500,
+        "descripcion": "Lista para horno, con tres capas, verdura y ricota, jamon y queso, bolognesa terminada con salsa clasica.",
+        "img": "./img/19.jpeg",
+        "cantidad": "700 gr",
         "categoria": "LASAGNA"
     },
     {
-        "titulo": "cLASICA",
-        "precio": 3000,
-        "descripcion": "ajo, albahaca y nuez",
-        "img": "./img/pastas22.png",
-        "cantidad": "500 gr",
+        "titulo": "SALSA DE TOMATE",
+        "precio": 2400,
+        "descripcion": "",
+        "img": "",
+        "cantidad": "500 cc",
         "categoria": "SALSAS"
     },
     {
         "titulo": "Bolognesa",
-        "precio": 3000,
-        "descripcion": " con hiervas; masa con tinta de remolacha",
-        "img": "./img/pastas22.png",
-        "cantidad": "500 gr",
+        "precio": 4000,
+        "descripcion": "",
+        "img": "",
+        "cantidad": "500 cc",
         "categoria": "SALSAS"
     },
     {
         "titulo": "ROSA",
         "precio": 3000,
-        "descripcion": " con hiervas; masa co tinta de remolacha",
-        "img": "./img/pastas23.png",
+        "descripcion": "",
+        "img": "",
         "cantidad": "500 gr",
         "categoria": "SALSAS"
-    },
-    {
-        "titulo": "ESTOFADO",
-        "precio": 3000,
-        "descripcion": " con hiervas; masa con tinta de remolacha",
-        "img": "./img/pastas23.png",
-        "cantidad": "500 gr",
-        "categoria": "SALSAS"
-    },
-    {
-        "titulo": "ALBONDIGA",
-        "precio": 3000,
-        "descripcion": "alMondigas de carne picadiña",
-        "img": "./img/pastas23.png",
-        "cantidad": "500 gr",
-        "categoria": "SALSAS"
-    },
-    {
-        "titulo": "TIRAMISU",
-        "precio": 3000,
-        "descripcion": " con hiervas; masa con tinta de remolacha",
-        "img": "./img/pastas24.png",
-        "cantidad": "250 gr",
-        "categoria": "POSTRES"
-    },
-    {
-        "titulo": "LEMON PIE",
-        "precio": 3000,
-        "descripcion": " con hiervas; masa con tinta de remolacha",
-        "img": "./img/pastas12.png",
-        "cantidad": "250 gr",
-        "categoria": "POSTRES"
-    },
-    {
-        "titulo": "CHOCOTORTA",
-        "precio": 3000,
-        "descripcion": " con hiervas; masa con tinta remolacha",
-        "img": "./img/pastas25.png",
-        "cantidad": "250 gr",
-        "categoria": "POSTRES"
     }
 ]

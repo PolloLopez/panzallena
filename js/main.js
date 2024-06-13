@@ -199,7 +199,10 @@ const actualizarCarrito = () => {
 
             const divTitulo = document.createElement("div");
             divTitulo.classList.add("carrito-producto-titulo");
-            divTitulo.innerHTML = `<h3>${producto.titulo}</h3>`;
+            divTitulo.innerHTML = `
+                <h3>${producto.titulo}</h3>
+                <img class="carrito-img" src="${producto.img}" alt="${producto.titulo}">
+            `;
             divProducto.appendChild(divTitulo);
 
             const divDetalles = document.createElement("div");
@@ -229,24 +232,30 @@ const actualizarCarrito = () => {
             });
             divDetalles.appendChild(btnSumar);
 
+            const divSubtotal = document.createElement("div");
+            divSubtotal.classList.add("carrito-subtotal");
+
             const subtotal = document.createElement("p");
-            subtotal.innerText = `$${producto.cantidad * producto.precio}`;
-            divDetalles.appendChild(subtotal);
+            subtotal.classList.add("p-subtotal");
+            subtotal.innerText = `$ ${producto.cantidad * producto.precio}`;
+            divSubtotal.appendChild(subtotal);
 
             const btnEliminar = document.createElement("button");
             btnEliminar.classList.add("btn-carrito");
+            btnEliminar.classList.add("btn-x");
             btnEliminar.innerText = "❌";
             btnEliminar.addEventListener("click", () => {
                 borrarDelCarrito(producto);
             });
-            divDetalles.appendChild(btnEliminar);
+            divSubtotal.appendChild(btnEliminar);
 
             divProducto.appendChild(divDetalles);
+            divProducto.appendChild(divSubtotal);
             carritoProductos.appendChild(divProducto);
-        })
+        });
+
         actualizarTotal();
         numerito.innerText = calcularNumerito();
-        ;
 
         // Actualizar el total del carrito en el DOM
         carritoTotal.textContent = `$${calcularTotalCarrito()}`;
