@@ -357,13 +357,14 @@ a {
     grid-template-columns: 1fr 2fr;
     grid-template-rows: auto auto;
     gap: 0.5em;
-    border: 1px solid;
+    border: 1px solid var(--color-texto-negro);
     border-radius: 1rem;
     background-color: var(--color-verde-sombra);
     padding: 0;
     margin-bottom: 0.5em;
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: 400;
+    
 }
 
 .carrito-producto-titulo {

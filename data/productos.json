@@ -155,7 +155,7 @@
         "titulo": "SALSA DE TOMATE",
         "precio": 2400,
         "descripcion": "",
-        "img": "",
+        "img": "./img/20.jpeg",
         "cantidad": "500 cc",
         "categoria": "SALSAS"
     },
@@ -163,7 +163,7 @@
         "titulo": "Bolognesa",
         "precio": 4000,
         "descripcion": "",
-        "img": "",
+        "img": "./img/21.jpeg",
         "cantidad": "500 cc",
         "categoria": "SALSAS"
     },
@@ -171,7 +171,7 @@
         "titulo": "ROSA",
         "precio": 3000,
         "descripcion": "",
-        "img": "",
+        "img": "./img/22.jpeg",
         "cantidad": "500 gr",
         "categoria": "SALSAS"
     }
