@@ -16,5 +16,5 @@ document.getElementById("finalizarCompra").addEventListener("click", function ()
     mensaje = encodeURIComponent(mensaje);
 
     // Redirecciona al usuario al enlace de WhatsApp con el mensaje y el número de teléfono
-    window.open(`https://wa.me/2324529751?text=${mensaje}`, '_blank');
+    window.open(`https://wa.me/2324589620?text=${mensaje}`, '_blank');
 });
